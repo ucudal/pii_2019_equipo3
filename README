@@ -1,6 +1,6 @@
 
 Casos de interaccion 
-https://github.com/ucudal/pii_2019_equipo3/blob/Faustina/Diagrama%20P%C3%A1ginas%20Web%20(A4)%20nota%20(3).png
+https://github.com/ucudal/pii_2019_equipo3/blob/Faustina/CasosInteraccion.png
 
 Al entrar a la aplicación el usuario  va a tener una página de log in, la siguiente página va a variar según el tipo de usuario (cliente, técnico o empleado).
 

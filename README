@@ -1,1 +1,50 @@
 
+Casos de interaccion 
+https://raw.githubusercontent.com/faausti/pii_2019_equipo3/Faustina/Diagrama Páginas Web (A4) nota (3).png
+https://github.com/ucudal/pii_2019_equipo3/blob/Faustina/Diagrama%20P%C3%A1ginas%20Web%20(A4)%20nota%20(3).png
+
+Al entrar a la aplicación el usuario  va a tener una página de log in, la siguiente página va a variar según el tipo de usuario (cliente, técnico o empleado).
+
+
+Clientes
+
+⦁	En WebLogIn el cliente debe ingresar el nombre de usuario y la contraseña y clickear “ingresar”. La clase LogInValidate va a pedirle a la clase ClientDirectory que busque en la lista de clientes si el mail dado corresponde con la contraseña dada; si los datos son válidos el cliente es redirigido a la página WebMainClient.
+
+⦁	Si el cliente clickea en “crear nuevo proyecto”, es redireccionado a la página WebClientProjectMaker.
+
+⦁	Si en WebClientProjectMaker llena los datos requerido y clickea en “crear” la clase ProjectAllocator llama al método AddProject() de la clase cliente, creándose una nueva instancia de la clase Project (la cual aparece en la lista de proyectos publicados en WebMainClient).
+
+⦁	Si el cliente clickea en su proyecto que aparece publicado en  WebMainClient (todavía no asignados a un técnico) se lo direcciona a la página WebClientProjectPublished del proyecto.
+
+⦁	Si clickea en uno de los técnicos (que aparecen en WebClientProjectPublished) se redireccionará a la página WebClientTechnicianViewer donde podrá ver el feedback que tiene un técnico.
+
+⦁	Si clickea en seleccionar técnico, la clase FinalTechnicianSelector ejecuta un método que borra el proyecto de la lista de proyectos publicados, y lo agrega al técnico seleccionado con  el método AddProject de ProjectAllocator .
+
+⦁	En WebMainClient, si el cliente clickea en un proyecto en la lista de proyectos asignados, se redirecciona a la página WebClientProjectAssigned del proyecto.
+
+⦁	Si en WebClientProjectAssigned el cliente selecciona “finalizar proyecto” se le redirecciona a la página “WebClientProjectFinisher”.
+
+En WebClientProjectFinisher deberá ingresar el feedback, seleccionar positivo o negativo y agregar un comentario el cual va a ser guardado en un archivo por la clase Feedback para luego agregarlo al técnico. 
+
+
+Tecnicos
+
+⦁ 	En WebLogIn el técnico debe ingresar el nombre de usuario y la contraseña y clickear “ingresar”. La clase LogInValidate va a pedirle a la clase TechniciansDirectory que busque en la lista de tecnicos si el mail dado corresponde con la contraseña dada; si los datos son válidos el cliente es redirigido a la página WebMainTechnicians.
+
+⦁	Si el técnico clickea en un proyecto de la lista de proyectos disponibles será direccionado a la página WebTechnicianProjectAvailable del proyecto donde podrá ver la información de ese proyecto.
+
+⦁	Si en WebTechnicianProjectAvailable el técnico clickea en “aceptar propuesta” se ejecutará un método de la clase ProjectAllocator el cual agrega el proyecto a la lista de la clase Technicians (sólo podrá aceptarla si no está en un proyecto actualmente )
+
+⦁	Si en WebMainTechnician clickea en un proyecto que ya le asignaron  se le redireccionará a la página WebTechnicianProjectAssigned del proyecto con la información del mismo.
+
+
+Empleados
+
+⦁	En WebLogIn el empleado debe ingresar el nombre de usuario y la contraseña y clickear “ingresar”. La clase LogInValidate va a pedirle a la clase EmployeeDirectory que busque en la lista de empleados  si el mail dado corresponde con la contraseña dada; si los datos son válidos el cliente es redirigido a la página WebMainEmployee.
+
+
+En WebMainEmployee el empleado debe ingresar un correo en el buscador y seleccionar una de las tres opciones (clickeando en el botón correspondiente).
+
+⦁	Si clickea en “buscar técnico” se redireccionará a la página WebEmployeeTechnicianViewer del técnico que tiene el email ingresado.
+
+⦁	Si clickea en “buscar cliente” se redireccionará a la página WebEmployeeClientViewer del cliente  que tiene el email ingresado. Tambien podra ver los proyectos de cada cliente en el WebEmployeeViewerProject.

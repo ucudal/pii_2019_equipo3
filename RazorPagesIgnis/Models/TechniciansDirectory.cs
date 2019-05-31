@@ -7,9 +7,9 @@ namespace RazorPagesIgnis.Models
     public class TechniciansDirectory
     {
         public IList<Technician> Technicians = new List<Technician>();
-        public void AddTechnician(string nombre, int edad, string mail, string contraseña, string nivel, string especialidad, string estado)
+        public void AddTechnician(string name, int age, string mail, string password, string level, string specialty, string status)
         {
-            Technician technician = new Technician(nombre, edad, mail, contraseña, nivel, especialidad, estado);
+            Technician technician = new Technician(name, age, mail, password, level, specialty, status);
             this.Technicians.Add(technician);
         }
         public bool RemoveTechnician(string mail)

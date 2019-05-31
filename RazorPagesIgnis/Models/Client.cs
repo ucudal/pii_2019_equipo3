@@ -6,7 +6,7 @@ namespace RazorPagesIgnis.Models
 {
     public class Client : ProjectHolder
     {
-        public Client(string nombre, int edad, string mail, string contraseña) : base(nombre, edad, mail, contraseña)
+        public Client(string name, int age, string mail, string password) : base(name, age, mail, password)
         {
         }
         public IList<Project> Projects = new List<Project>();

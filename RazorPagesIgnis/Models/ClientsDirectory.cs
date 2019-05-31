@@ -8,9 +8,9 @@ namespace RazorPagesIgnis.Models
     {
         public IList<Client> Clients = new List<Client>();
 
-        public void AddClient(string nombre, int edad, string mail, string contraseña)
+        public void AddClient(string name, int age, string mail, string password)
         {
-            Client client = new Client(nombre, edad, mail, contraseña);
+            Client client = new Client(name, age, mail, password);
             this.Clients.Add(client);
         }
         public bool RemoveClient(string mail)

@@ -5,16 +5,16 @@ namespace RazorPagesIgnis.Models
 {
     public abstract class Person
     {
-        public Person(string nombre, int edad, string mail, string contraseña)
+        public Person(string name, int age, string mail, string password)
         {
-            this.Nombre = nombre;
-            this.Edad = edad;
+            this.Name = name;
+            this.Age = age;
             this.Mail = mail;
-            this.Contraseña = contraseña;
+            this.Password = password;
         }
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
         public string Mail { get; set; }
-        public string Contraseña { get; set; }
+        public string Password { get; set; }
     }
 }

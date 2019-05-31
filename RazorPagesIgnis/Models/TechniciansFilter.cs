@@ -20,7 +20,7 @@ namespace RazorPagesIgnis.Models
 
             foreach(Technician technician in Directory.Technicians)
             {
-                if(this.Project.Nivel == technician.Nivel && this.Project.Especialidad == technician.Especialidad)
+                if(this.Project.Level == technician.Level && this.Project.Specialty == technician.Specialty)
                 {
                     this.FilteredTechnicians.Add(technician);
                 }

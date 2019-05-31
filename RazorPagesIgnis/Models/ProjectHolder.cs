@@ -5,7 +5,7 @@ namespace RazorPagesIgnis.Models
 {
     public abstract class ProjectHolder : Person
     {
-        public ProjectHolder(string nombre, int edad, string mail, string contraseña) : base(nombre, edad, mail, contraseña)
+        public ProjectHolder(string name, int age, string mail, string password) : base(name, age, mail, password)
         {
         }
     public virtual void AddProject(Project project)

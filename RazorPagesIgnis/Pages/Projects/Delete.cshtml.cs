@@ -11,9 +11,9 @@ namespace RazorPagesIgnis.Pages.Projects
 {
     public class DeleteModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesProjectContext _context;
+        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
 
-        public DeleteModel(RazorPagesIgnis.Models.RazorPagesProjectContext context)
+        public DeleteModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
         {
             _context = context;
         }

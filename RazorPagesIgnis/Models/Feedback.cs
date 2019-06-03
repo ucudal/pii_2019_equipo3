@@ -6,12 +6,8 @@ namespace RazorPagesIgnis.Models
 {
     public class Feedback
     {
-        public Feedback(string comment, bool positive)
-        {
-            this.Comment = comment;
-            this.Positive = positive;
-        }
-        public String Comment { set; get;}
-        public bool Positive { set; get;}
+        public int ID { set; get; }
+        public String Comment { set; get; }
+        public bool Positive { set; get; }
     }   
 }

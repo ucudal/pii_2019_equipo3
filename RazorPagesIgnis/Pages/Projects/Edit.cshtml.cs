@@ -12,9 +12,9 @@ namespace RazorPagesIgnis.Pages.Projects
 {
     public class EditModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesProjectContext _context;
+        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
 
-        public EditModel(RazorPagesIgnis.Models.RazorPagesProjectContext context)
+        public EditModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
         {
             _context = context;
         }

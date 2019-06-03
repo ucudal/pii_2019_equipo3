@@ -11,9 +11,9 @@ namespace RazorPagesIgnis.Pages.Projects
 {
     public class DetailsModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesProjectContext _context;
+        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
 
-        public DetailsModel(RazorPagesIgnis.Models.RazorPagesProjectContext context)
+        public DetailsModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
         {
             _context = context;
         }

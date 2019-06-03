@@ -25,9 +25,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Project[0].Client)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Project[0].Finished)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -45,9 +42,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Client)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Finished)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

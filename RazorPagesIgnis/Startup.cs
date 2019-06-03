@@ -32,9 +32,9 @@ namespace RazorPagesIgnis
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-        
-        services.AddDbContext<RazorPagesProjectContext>(options =>
-        options.UseSqlite(Configuration.GetConnectionString("ProjectContext")));
+
+            services.AddDbContext<RazorPagesIgnisContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("IgnisContext")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

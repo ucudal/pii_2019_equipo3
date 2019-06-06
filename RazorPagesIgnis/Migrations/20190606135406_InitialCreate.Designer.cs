@@ -9,7 +9,7 @@ using RazorPagesIgnis.Models;
 namespace RazorPagesIgnis.Migrations
 {
     [DbContext(typeof(RazorPagesIgnisContext))]
-    [Migration("20190603000203_InitialCreate")]
+    [Migration("20190606135406_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,8 +28,6 @@ namespace RazorPagesIgnis.Migrations
                     b.Property<string>("Mail");
 
                     b.Property<string>("Name");
-
-                    b.Property<string>("Password");
 
                     b.HasKey("ID");
 
@@ -59,9 +57,6 @@ namespace RazorPagesIgnis.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
                     b.Property<string>("Level");
 
                     b.Property<string>("Specialty");
@@ -69,8 +64,54 @@ namespace RazorPagesIgnis.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Project");
+                });
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Project");
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Client");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Level");
+
+                    b.Property<string>("Specialty");
+
+                    b.Property<int?>("TechnicianID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TechnicianID");
+
+                    b.ToTable("ProjectAssigned");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Client");
+
+                    b.Property<string>("Description");
+
+                    b.Property<int?>("FeedbackID");
+
+                    b.Property<string>("Level");
+
+                    b.Property<string>("Specialty");
+
+                    b.Property<int?>("TechnicianID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FeedbackID");
+
+                    b.HasIndex("TechnicianID");
+
+                    b.ToTable("ProjectFinished");
                 });
 
             modelBuilder.Entity("RazorPagesIgnis.Models.Technician", b =>
@@ -86,37 +127,11 @@ namespace RazorPagesIgnis.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Password");
-
                     b.Property<string>("Specialty");
-
-                    b.Property<string>("Status");
 
                     b.HasKey("ID");
 
                     b.ToTable("Technician");
-                });
-
-            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
-                {
-                    b.HasBaseType("RazorPagesIgnis.Models.Project");
-
-                    b.Property<int?>("TechnicianID");
-
-                    b.HasIndex("TechnicianID");
-
-                    b.HasDiscriminator().HasValue("ProjectAssigned");
-                });
-
-            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
-                {
-                    b.HasBaseType("RazorPagesIgnis.Models.ProjectAssigned");
-
-                    b.Property<int?>("FeedbackID");
-
-                    b.HasIndex("FeedbackID");
-
-                    b.HasDiscriminator().HasValue("ProjectFinished");
                 });
 
             modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
@@ -131,6 +146,10 @@ namespace RazorPagesIgnis.Migrations
                     b.HasOne("RazorPagesIgnis.Models.Feedback", "Feedback")
                         .WithMany()
                         .HasForeignKey("FeedbackID");
+
+                    b.HasOne("RazorPagesIgnis.Models.Technician", "Technician")
+                        .WithMany()
+                        .HasForeignKey("TechnicianID");
                 });
 #pragma warning restore 612, 618
         }

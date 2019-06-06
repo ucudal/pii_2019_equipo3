@@ -37,7 +37,10 @@
                 @Html.DisplayFor(modelItem => item.Level)
             </td>
             <td>
-                <a asp-page="./Select" asp-route-id="@item.ID">Select</a> |
+            <form method="post">
+                <input type="hidden" asp-for=Project />
+                <input type="submit" value="Select" class="btn btn-danger" />
+            </form>
             </td>   
         </tr>
 }

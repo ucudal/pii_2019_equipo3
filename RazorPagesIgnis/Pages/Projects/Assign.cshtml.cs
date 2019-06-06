@@ -22,9 +22,20 @@ namespace RazorPagesIgnis.Pages.Projects
 
         public Project Project { get; set; }
 
-        public async Task OnGetAsync()
+        public Technician TechnicianSelected { get; set; }
+
+        public async Task OnGetAsync(int? id)
         {
-            Technician = await _context.Technician.ToListAsync();
+            Project = await _context.Project.FindAsync(id);
+
+            var technicians = from t in _context.Technician
+                 select t;
+            if (Project != null)
+            {
+                technicians = technicians.Where(s => s.Specialty.Equals(Project.Specialty));
+                technicians = technicians.Where(s => s.Level.Equals(Project.Level) || s.Level.Equals("Avanzado"));
+            }
+            Technician = await technicians.ToListAsync();
         }
         public async Task<IActionResult> OnPostAsync(int? id)
         {
@@ -34,10 +45,20 @@ namespace RazorPagesIgnis.Pages.Projects
             }
 
             Project = await _context.Project.FindAsync(id);
+            TechnicianSelected = await _context.Technician.FindAsync(id);
 
             if (Project != null)
             {
+                ProjectAssigned NewProject = new ProjectAssigned();
+                NewProject.ID = Project.ID;
+                NewProject.Specialty = Project.Specialty;
+                NewProject.Level = Project.Level;
+                NewProject.Description = Project.Description;
+                NewProject.Client = Project.Client;
+                NewProject.Technician = TechnicianSelected;
+
                 _context.Project.Remove(Project);
+                _context.ProjectAssigned.Add(NewProject);
                 await _context.SaveChangesAsync();
             }
 

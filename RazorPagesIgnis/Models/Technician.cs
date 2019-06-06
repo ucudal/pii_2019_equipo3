@@ -7,6 +7,5 @@ namespace RazorPagesIgnis.Models
     {
     public string Level { set; get;}
     public string Specialty { set; get;}
-    public string Status { set; get;}
     }
 }

@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RazorPagesIgnis.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace RazorPagesIgnis
 {
@@ -31,6 +33,8 @@ namespace RazorPagesIgnis
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<RazorPagesIgnisContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("IgnisContext")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

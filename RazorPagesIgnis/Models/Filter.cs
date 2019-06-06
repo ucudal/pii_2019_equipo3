@@ -16,11 +16,11 @@ namespace RazorPagesIgnis.Models
     {
         public static IQueryable Filte( RazorPagesIgnis.Models.RazorPagesIgnisContext _context, string SearchString)
         {
-        IQueryable<string> genreQuery = from m in _context.Technicians
+        IQueryable<string> genreQuery = from m in _context.Technician
                                         orderby m.Level
                                         select m.Level;
 
-        var technician = from m in _context.Technicians
+        var technician = from m in _context.Technician
                      select m;
 
             if (!string.IsNullOrEmpty(SearchString))

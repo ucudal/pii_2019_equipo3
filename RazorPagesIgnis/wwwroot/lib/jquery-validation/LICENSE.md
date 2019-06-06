@@ -1,6 +1,3 @@
-The MIT License (MIT)
-=====================
-
 Copyright Jörn Zaefferer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

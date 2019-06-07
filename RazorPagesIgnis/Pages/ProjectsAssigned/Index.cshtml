@@ -1,0 +1,54 @@
+@page
+@model RazorPagesIgnis.Pages.ProjectsAssigned.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Specialty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Technician)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ProjectAssigned) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Technician.Name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

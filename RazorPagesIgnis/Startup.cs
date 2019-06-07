@@ -11,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RazorPagesIgnis.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace RazorPagesIgnis
 {
@@ -26,6 +29,8 @@ namespace RazorPagesIgnis
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -36,7 +41,34 @@ namespace RazorPagesIgnis
             services.AddDbContext<RazorPagesIgnisContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("IgnisContext")));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //services.AddIdentity<IdentityUser, IdentityRole>();
+            //services.AddDefaultIdentity<IdentityUser>();
+
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            services.AddMvc(config =>
+            {
+                // Requiere que haya usuarios logueados
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            })    
+
+
+            .AddRazorPagesOptions(options =>
+        {
+            options.AllowAreas = true;
+            options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+            options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+        });
+
+    services.ConfigureApplicationCookie(options =>
+    {
+        options.LoginPath = $"/Identity/Account/Login";
+        options.LogoutPath = $"/Identity/Account/Logout";
+        options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+    });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,11 +85,15 @@ namespace RazorPagesIgnis
                 app.UseHsts();
             }
 
+            
+            app.UseCookiePolicy();
+        
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-
+            app.UseAuthentication();
             app.UseMvc();
         }
+
+        
     }
 }

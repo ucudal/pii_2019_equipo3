@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using RazorPagesIgnis.Areas.Identity.Data;
 
 [assembly: HostingStartup(typeof(RazorPagesIgnis.Areas.Identity.IdentityHostingStartup))]
-
 namespace RazorPagesIgnis.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
@@ -16,9 +15,12 @@ namespace RazorPagesIgnis.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDefaultIdentity<ApplicationUser>()
-                    .AddRoles<IdentityRole>()
-                    .AddEntityFrameworkStores<IdentityContext>();
+                services.AddDbContext<RazorPagesIgnisIdentityDbContext>(options =>
+                    options.UseSqlServer(
+                        context.Configuration.GetConnectionString("RazorPagesIgnisIdentityDbContextConnection")));
+
+                services.AddDefaultIdentity<IdentityUser>()
+                    .AddEntityFrameworkStores<RazorPagesIgnisIdentityDbContext>();
             });
         }
     }

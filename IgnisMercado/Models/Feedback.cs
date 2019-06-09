@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
@@ -7,30 +6,8 @@ namespace RazorPagesIgnis.Models
 {
     public class Feedback
     {
-        public Feedback(string comentario, bool positivo)
-        {
-            this.Comentario = comentario;
-            this.Positivo = positivo;
-        }
-        public String Comentario { set; get;}
-        public bool Positivo { set; get;}
+        public int ID { set; get; }
+        public String Comment { set; get; }
+        public bool Positive { set; get; }
     }   
-=======
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-
-namespace RazorPagesIgnis.Models
-{
-    public class Feedback
-    {
-        public Feedback(string comentario, bool positivo)
-        {
-            this.Comentario = comentario;
-            this.Positivo = positivo;
-        }
-        public String Comentario { set; get;}
-        public bool Positivo { set; get;}
-    }   
->>>>>>> master
 }

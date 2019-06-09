@@ -1,46 +1,13 @@
-<<<<<<< HEAD
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace RazorPagesIgnis.Models
 {
-    public class Project
+    public class Project : IProject
     {
-        public Project(string especialidad, string nivel, string descripcion, Client cliente, bool terminado)
-        {
-            this.Especialidad = especialidad;
-            this.Nivel = nivel;
-            this.Descripcion = descripcion;
-            this.Cliente = cliente;
-            this.Terminado = terminado;
-        }
-        public string Especialidad { set; get;}
-        public string Nivel { set; get;}
-        public string Descripcion { set; get;}
-        public Client Cliente { set; get;}
-        public bool Terminado { set; get;}
+        public int ID { get; set; }
+        public string Specialty { get; set; }
+        public string Level { get; set; }
+        public string Description { get; set; }
+        public string Client { get; set; }
     }
-=======
-using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace RazorPagesIgnis.Models
-{
-    public class Project
-    {
-        public Project(string especialidad, string nivel, string descripcion, Client cliente, bool terminado)
-        {
-            this.Especialidad = especialidad;
-            this.Nivel = nivel;
-            this.Descripcion = descripcion;
-            this.Cliente = cliente;
-            this.Terminado = terminado;
-        }
-        public string Especialidad { set; get;}
-        public string Nivel { set; get;}
-        public string Descripcion { set; get;}
-        public Client Cliente { set; get;}
-        public bool Terminado { set; get;}
-    }
->>>>>>> master
 }

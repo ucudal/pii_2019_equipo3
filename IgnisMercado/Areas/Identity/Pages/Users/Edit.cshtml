@@ -1,0 +1,56 @@
+@page
+@model RazorPagesIgnis.Areas.Identity.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ApplicationUser</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ApplicationUser.Name" class="control-label"></label>
+                <input asp-for="ApplicationUser.Name" class="form-control" />
+                <span asp-validation-for="ApplicationUser.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationUser.DOB" class="control-label"></label>
+                <input asp-for="ApplicationUser.DOB" class="form-control" />
+                <span asp-validation-for="ApplicationUser.DOB" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ApplicationUser.Id" />
+            <div class="form-group">
+                <label asp-for="ApplicationUser.UserName" class="control-label"></label>
+                <input asp-for="ApplicationUser.UserName" class="form-control" />
+                <span asp-validation-for="ApplicationUser.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationUser.Email" class="control-label"></label>
+                <input asp-for="ApplicationUser.Email" class="form-control" />
+                <span asp-validation-for="ApplicationUser.Email" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label">Role:</label>
+                @{
+                List<SelectListItem> listItems = new List<SelectListItem>(Model.RolesList);
+                }
+                @Html.DropDownListFor(model => model.Role, listItems, "-- Select Role --", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

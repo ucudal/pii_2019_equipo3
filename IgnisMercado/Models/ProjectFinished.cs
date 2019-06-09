@@ -1,30 +1,16 @@
-<<<<<<< HEAD
 using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace RazorPagesIgnis.Models
 {
-    public class ProjectFinished : ProjectAssigned
+    public class ProjectFinished : IProject
     {
-        public ProjectFinished(string especialidad, string nivel, string descripcion, Client cliente, bool terminado, Technician tecnico, Feedback feedback) : base(especialidad, nivel, descripcion, cliente, terminado, tecnico)
-        {
-            this.Feedback = feedback;
-        }
-        public Feedback Feedback { set; get;}
+        public Feedback Feedback { get; set; }
+        public Technician Technician { get ; set; }
+        public int ID { get; set; }
+        public string Specialty { get; set; }
+        public string Level { get; set; }
+        public string Description { get; set; }
+        public string Client { get; set; }
     }
-=======
-using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace RazorPagesIgnis.Models
-{
-    public class ProjectFinished : ProjectAssigned
-    {
-        public ProjectFinished(string especialidad, string nivel, string descripcion, Client cliente, bool terminado, Technician tecnico, Feedback feedback) : base(especialidad, nivel, descripcion, cliente, terminado, tecnico)
-        {
-            this.Feedback = feedback;
-        }
-        public Feedback Feedback { set; get;}
-    }
->>>>>>> master
 }

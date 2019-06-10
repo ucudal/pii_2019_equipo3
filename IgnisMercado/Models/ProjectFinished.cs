@@ -3,9 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RazorPagesIgnis.Models
 {
-    public class ProjectAssigned : IProject
+    public class ProjectFinished : IProject
     {
-        public Technician Technician { set; get;}
+        public Feedback Feedback { get; set; }
+        public Technician Technician { get ; set; }
         public int ID { get; set; }
         public string Specialty { get; set; }
         public string Level { get; set; }

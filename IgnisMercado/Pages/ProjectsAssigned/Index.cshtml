@@ -2,31 +2,28 @@
 @model RazorPagesIgnis.Pages.ProjectsAssigned.IndexModel
 
 @{
-    ViewData["Title"] = "Proyectos asignados";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Proyectos Asignados</h1>
+<h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Crear un proyecto nuevo</a>
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Especialidad
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Specialty)
             </th>
             <th>
-                Nivel
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Level)
             </th>
             <th>
-                Descripción
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Description)
             </th>
             <th>
-                Cantidad de horas
-            </th>
-            <th>
-                Técnico
+                @Html.DisplayNameFor(model => model.ProjectAssigned[0].Technician)
             </th>
             <th></th>
         </tr>
@@ -44,15 +41,12 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NHours)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Technician.Name)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

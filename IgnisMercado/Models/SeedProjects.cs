@@ -25,21 +25,21 @@ namespace RazorPagesIgnis.Models
                         Specialty = "Fotógrafo",
                         Level = "Avanzado",
                         Description = "-",
-                        NHours = 3,
+                        Client = "Cliente1",
                     },
                     new Project
                     {
                         Specialty = "Fotógrafo",
                         Level = "Intermedio",
                         Description = "-",
-                        NHours = 1,
+                        Client = "Cliente1",
                     },
                     new Project
                     {
                         Specialty = "Camarógrafo",
                         Level = "Intermedio",
                         Description = "-",
-                        NHours = 7,
+                        Client = "Cliente1",
                     }
                 );
                 context.SaveChanges();

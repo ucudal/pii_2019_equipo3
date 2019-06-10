@@ -2,42 +2,42 @@
 @model RazorPagesIgnis.Pages.Projects.DetailsModel
 
 @{
-    ViewData["Title"] = "Detalles";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Detalles</h1>
+<h1>Details</h1>
 
 <div>
-    <h4>Proyecto</h4>
+    <h4>Project</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            Especialidad
+            @Html.DisplayNameFor(model => model.Project.Specialty)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Project.Specialty)
         </dd>
         <dt class="col-sm-2">
-            Nivel
+            @Html.DisplayNameFor(model => model.Project.Level)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Project.Level)
         </dd>
         <dt class="col-sm-2">
-            Descripción
+            @Html.DisplayNameFor(model => model.Project.Description)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Project.Description)
         </dd>
         <dt class="col-sm-2">
-            Cantidad de horas
+            @Html.DisplayNameFor(model => model.Project.Client)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Project.NHours)
+            @Html.DisplayFor(model => model.Project.Client)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Project.ID">Editar</a> |
-    <a asp-page="./Index">Volver a la lista</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Project.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>

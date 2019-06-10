@@ -8,6 +8,6 @@ namespace RazorPagesIgnis.Models
         public string Specialty { get; set; }
         public string Level { get; set; }
         public string Description { get; set; }
-        public int NHours { get; set; }
+        public string Client { get; set; }
     }
 }

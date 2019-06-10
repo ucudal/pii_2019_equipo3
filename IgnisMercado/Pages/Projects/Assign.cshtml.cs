@@ -22,7 +22,8 @@ namespace RazorPagesIgnis.Pages.Projects
 
         public Project Project { get; set; }
 
-        public Technician TechnicianSelected { get; set; }
+        public int? TechnicianID;
+        public Technician TechnicianSelected;
 
         public async Task OnGetAsync(int? id)
         {
@@ -37,20 +38,19 @@ namespace RazorPagesIgnis.Pages.Projects
             }
             Technician = await technicians.ToListAsync();
         }
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int? id, int? technicianID)
         {
-            if (id == null)
+            if (id == null || technicianID == null) 
             {
                 return NotFound();
             }
 
             Project = await _context.Project.FindAsync(id);
-            TechnicianSelected = await _context.Technician.FindAsync(id);
+            TechnicianSelected = await _context.Technician.FindAsync(technicianID);
 
-            if (Project != null)
+            if (Project != null && TechnicianSelected != null)
             {
                 ProjectAssigned NewProject = new ProjectAssigned();
-                NewProject.ID = Project.ID;
                 NewProject.Specialty = Project.Specialty;
                 NewProject.Level = Project.Level;
                 NewProject.Description = Project.Description;

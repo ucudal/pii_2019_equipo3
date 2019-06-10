@@ -15,12 +15,9 @@ namespace RazorPagesIgnis.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<RazorPagesIgnisIdentityDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("RazorPagesIgnisIdentityDbContextConnection")));
-
-                services.AddDefaultIdentity<IdentityUser>()
-                    .AddEntityFrameworkStores<RazorPagesIgnisIdentityDbContext>();
+                services.AddDefaultIdentity<ApplicationUser>()
+                    .AddRoles<IdentityRole>()
+                    .AddEntityFrameworkStores<IdentityContext>();
             });
         }
     }

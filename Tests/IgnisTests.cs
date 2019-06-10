@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using RazorPagesIgnis.Models;
+using System.Collections.Generic;
 
 
 namespace Tests
@@ -56,5 +57,60 @@ namespace Tests
             level1.Level = "Avanzado";
             Assert.Equal("Avanzado",level1.Level);
         }
+        [Fact]
+        public void ClientListTest()
+        {
+            Project proy = new Project();
+            Project proy2 = new Project();
+            Client list = new Client();
+            Assert.Equal(0,list.Projects.Count);
+            list.Projects.Add(proy);
+            Assert.Equal(1,list.Projects.Count);
+            list.Projects.Remove(proy);
+            Assert.Equal(0,list.Projects.Count);
+            list.Projects.Add(proy);
+            list.Projects.Add(proy2);
+            list.Projects.Clear();
+            Assert.Equal(0,list.Projects.Count);
+        }
+
+         [Fact]
+        public void ProjectSpecialtyTest()
+        {
+            Project specialty1 = new Project();
+            specialty1.Specialty = "Fotografo";
+            Assert.Equal("Fotografo",specialty1.Specialty);
+        }
+
+        [Fact]
+        public void ProjectLevelTest()
+        {
+            Project level1 = new Project();
+            level1.Level = "Avanzado";
+            Assert.Equal("Avanzado",level1.Level);
+        }
+
+        [Fact]
+        public void ProjectDescriptionTest()
+        {
+            Project description1 = new Project();
+            description1.Description = "-";
+            Assert.Equal("-",description1.Description);
+        }
+
+/* 
+        [Fact]
+        public void ProjectAssignerTest()
+        {
+            Microsoft.EntityFrameworkCore.DbContextOptions<RazorPagesIgnisContext> options = new Microsoft.EntityFrameworkCore.DbContextOptions<RazorPagesIgnisContext>();
+            RazorPagesIgnisContext razorPages = new RazorPagesIgnisContext(options);
+            Project proy = new Project();
+            Technician tech = new Technician();
+            ProjectAssigner assigner = new ProjectAssigner(proy,tech,razorPages);
+            assigner.Assigner();
+            Assert.Equal(null,razorPages.Project.Find(proy));
+            Assert.Equal(true,razorPages.ProjectAssigned.Find(proy).Equals(proy));
+        }
+*/
     }
 }

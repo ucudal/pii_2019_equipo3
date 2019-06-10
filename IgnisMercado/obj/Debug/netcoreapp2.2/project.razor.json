@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\usuario\\Desktop\\UCU\\Programacion2\\Proyecto2019\\IgnisMercado\\RazorPagesIgnis.csproj",
+  "FilePath": "c:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2673,7 +2673,7 @@
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.SpaServices",
-        "Documentation": null,
+        "Documentation": "\n            <summary>\n            A tag helper for prerendering JavaScript applications on the server.\n            </summary>\n        ",
         "TagOutputHint": null,
         "TagMatchingRules": [
           {
@@ -2700,7 +2700,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": null,
+            "Documentation": "\n            <summary>\n            Specifies the path to the JavaScript module containing prerendering code.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "ModuleName"
@@ -2713,7 +2713,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": null,
+            "Documentation": "\n            <summary>\n            If set, specifies the name of the CommonJS export that is the prerendering function to execute.\n            If not set, the JavaScript module's default CommonJS export must itself be the prerendering function.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "ExportName"
@@ -2726,7 +2726,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": null,
+            "Documentation": "\n            <summary>\n            An optional JSON-serializable parameter to be supplied to the prerendering code.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "CustomDataParameter"
@@ -2739,7 +2739,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": null,
+            "Documentation": "\n            <summary>\n            The maximum duration to wait for prerendering to complete.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "TimeoutMillisecondsParameter"
@@ -2757,5 +2757,166 @@
     "CSharpLanguageVersion": 703
   },
   "RootNamespace": "RazorPagesIgnis",
-  "Documents": []
+  "Documents": [
+    {
+      "FilePath": "Pages\\Projects\\Create.cshtml",
+      "TargetPath": "Pages\\Projects\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsAssigned\\Details.cshtml",
+      "TargetPath": "Pages\\ProjectsAssigned\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsAssigned\\Delete.cshtml",
+      "TargetPath": "Pages\\ProjectsAssigned\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Privacy.cshtml",
+      "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Projects\\Assign.cshtml",
+      "TargetPath": "Pages\\Projects\\Assign.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsAssigned\\Index.cshtml",
+      "TargetPath": "Pages\\ProjectsAssigned\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsAssigned\\Edit.cshtml",
+      "TargetPath": "Pages\\ProjectsAssigned\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Users\\Details.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Users\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Users\\Index.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Users\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Projects\\Edit.cshtml",
+      "TargetPath": "Pages\\Projects\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsAssigned\\Create.cshtml",
+      "TargetPath": "Pages\\ProjectsAssigned\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Projects\\Delete.cshtml",
+      "TargetPath": "Pages\\Projects\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Projects\\Index.cshtml",
+      "TargetPath": "Pages\\Projects\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Users\\Delete.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Users\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Projects\\Details.cshtml",
+      "TargetPath": "Pages\\Projects\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Users\\Edit.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Users\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "FileKind": "mvc"
+    }
+  ]
 }

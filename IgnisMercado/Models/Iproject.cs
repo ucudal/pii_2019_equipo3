@@ -9,6 +9,6 @@ namespace RazorPagesIgnis.Models
         string Specialty { set; get; }
         string Level { set; get; }
         string Description { set; get; }
-        String Client { set; get; }
+        int NHours { set; get; }
     }
 }

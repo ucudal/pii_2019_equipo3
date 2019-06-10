@@ -54,7 +54,7 @@ namespace RazorPagesIgnis.Pages.Projects
                 NewProject.Specialty = Project.Specialty;
                 NewProject.Level = Project.Level;
                 NewProject.Description = Project.Description;
-                NewProject.Client = Project.Client;
+                NewProject.NHours = Project.NHours;
                 NewProject.Technician = TechnicianSelected;
 
                 _context.Project.Remove(Project);

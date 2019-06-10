@@ -5,21 +5,25 @@
     ViewData["Title"] = "Assign Technician";
 }
 
-<h1>Assign Technician</h1>
+<h1>Asignar técnico</h1>
 
-<h4>Project</h4>
+<h4>Proyecto</h4>
 <hr />
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Technician[0].Name)
+                Nombre
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Technician[0].Age)
+               Edad
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Technician[0].Level)
+                Nivel
+            </th>
+
+            <th>
+                Especialidad
             </th>
             <th></th>
         </tr>
@@ -37,9 +41,12 @@
                 @Html.DisplayFor(modelItem => item.Level)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
             <form method="post">
                 <input type="hidden" asp-for=Project />
-                <input type="submit" value="Select" class="btn btn-danger" />
+                <input type="submit" value="Seleccionar" class="btn btn-danger" />
             </form>
             </td>   
         </tr>
@@ -48,7 +55,7 @@
 </table>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

@@ -22,20 +22,6 @@ namespace RazorPagesIgnis.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Feedback",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Comment = table.Column<string>(nullable: true),
-                    Positive = table.Column<bool>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Feedback", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Project",
                 columns: table => new
                 {
@@ -44,7 +30,7 @@ namespace RazorPagesIgnis.Migrations
                     Specialty = table.Column<string>(nullable: true),
                     Level = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    Client = table.Column<string>(nullable: true)
+                    NHours = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -78,7 +64,7 @@ namespace RazorPagesIgnis.Migrations
                     Specialty = table.Column<string>(nullable: true),
                     Level = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    Client = table.Column<string>(nullable: true)
+                    NHours = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -91,49 +77,9 @@ namespace RazorPagesIgnis.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "ProjectFinished",
-                columns: table => new
-                {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FeedbackID = table.Column<int>(nullable: true),
-                    TechnicianID = table.Column<int>(nullable: true),
-                    Specialty = table.Column<string>(nullable: true),
-                    Level = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Client = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProjectFinished", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_ProjectFinished_Feedback_FeedbackID",
-                        column: x => x.FeedbackID,
-                        principalTable: "Feedback",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_ProjectFinished_Technician_TechnicianID",
-                        column: x => x.TechnicianID,
-                        principalTable: "Technician",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectAssigned_TechnicianID",
                 table: "ProjectAssigned",
-                column: "TechnicianID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectFinished_FeedbackID",
-                table: "ProjectFinished",
-                column: "FeedbackID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectFinished_TechnicianID",
-                table: "ProjectFinished",
                 column: "TechnicianID");
         }
 
@@ -147,12 +93,6 @@ namespace RazorPagesIgnis.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProjectAssigned");
-
-            migrationBuilder.DropTable(
-                name: "ProjectFinished");
-
-            migrationBuilder.DropTable(
-                name: "Feedback");
 
             migrationBuilder.DropTable(
                 name: "Technician");

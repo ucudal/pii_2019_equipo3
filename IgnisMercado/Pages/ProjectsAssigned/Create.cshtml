@@ -2,36 +2,36 @@
 @model RazorPagesIgnis.Pages.ProjectsAssigned.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
-<h4>ProjectAssigned</h4>
+<h4>Proyectos asignados</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ProjectAssigned.Specialty" class="control-label"></label>
+                <label asp-for="ProjectAssigned.Specialty" class="control-label">Especialidad</label>
                 <input asp-for="ProjectAssigned.Specialty" class="form-control" />
                 <span asp-validation-for="ProjectAssigned.Specialty" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProjectAssigned.Level" class="control-label"></label>
+                <label asp-for="ProjectAssigned.Level" class="control-label">Nivel</label>
                 <input asp-for="ProjectAssigned.Level" class="form-control" />
                 <span asp-validation-for="ProjectAssigned.Level" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProjectAssigned.Description" class="control-label"></label>
+                <label asp-for="ProjectAssigned.Description" class="control-label">Descripción</label>
                 <input asp-for="ProjectAssigned.Description" class="form-control" />
                 <span asp-validation-for="ProjectAssigned.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProjectAssigned.Client" class="control-label"></label>
-                <input asp-for="ProjectAssigned.Client" class="form-control" />
-                <span asp-validation-for="ProjectAssigned.Client" class="text-danger"></span>
+                <label asp-for="ProjectAssigned.NHours" class="control-label">Cantidad de horas</label>
+                <input asp-for="ProjectAssigned.NHours" class="form-control" />
+                <span asp-validation-for="ProjectAssigned.NHours" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -41,7 +41,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

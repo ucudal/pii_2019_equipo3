@@ -1,0 +1,43 @@
+@page
+@model RazorPagesIgnis.Pages.ProjectsAssigned.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Proyectos asignados</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Especialidad
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Specialty)
+        </dd>
+        <dt class="col-sm-2">
+            Nivel
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Level)
+        </dd>
+        <dt class="col-sm-2">
+            Descripcion
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Cantidad de horas
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.NHours)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProjectAssigned.ID">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
+</div>

@@ -1,0 +1,63 @@
+@page
+@model RazorPagesIgnis.Pages.Projects.AssignModel
+
+@{
+    ViewData["Title"] = "Assign Technician";
+}
+
+<h1>Asignar técnico</h1>
+
+<h4>Proyecto</h4>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+               Edad
+            </th>
+            <th>
+                Nivel
+            </th>
+
+            <th>
+                Especialidad
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Technician) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+            <form method="post">
+                <input type="hidden" asp-for=Project />
+                <input type="submit" value="Seleccionar" class="btn btn-danger" />
+            </form>
+            </td>   
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-page="./Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

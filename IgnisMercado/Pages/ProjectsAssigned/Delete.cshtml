@@ -1,0 +1,46 @@
+@page
+@model RazorPagesIgnis.Pages.ProjectsAssigned.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Seguro que quieres eliminar el proyecto?</h3>
+<div>
+    <h4>Proyectos asignados</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Especialidad
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Specialty)
+        </dd>
+        <dt class="col-sm-2">
+            Nivel
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Level)
+        </dd>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Cantidad de horas
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.NHours)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ProjectAssigned.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Volver a la lista</a>
+    </form>
+</div>

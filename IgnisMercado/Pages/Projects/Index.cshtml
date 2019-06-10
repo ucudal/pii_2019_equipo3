@@ -1,0 +1,55 @@
+@page
+@model RazorPagesIgnis.Pages.Projects.IndexModel
+
+@{
+    ViewData["Title"] = "Proyectos publicados";
+}
+
+<h1>Proyectos publicados</h1>
+
+<p>
+    <a asp-page="Create">Crear un proyecto nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Especialidad
+            </th>
+            <th>
+                Nivel
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Cantidad de horas
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Project) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHours)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a> |
+                <a asp-page="./Assign" asp-route-id="@item.ID">Asignar</a>
+            </td>   
+        </tr>
+}
+    </tbody>
+</table>

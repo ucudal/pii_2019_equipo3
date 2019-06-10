@@ -29,7 +29,7 @@ namespace RazorPagesIgnis.Models
                 NewProject.Specialty = Project.Specialty;
                 NewProject.Level = Project.Level;
                 NewProject.Description = Project.Description;
-                NewProject.Client = Project.Client;
+                NewProject.NHours = Project.NHours;
                 NewProject.Technician = Technician;
 
                 _context.Project.Remove(Project);

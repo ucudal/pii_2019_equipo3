@@ -5,10 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
+
 
 namespace RazorPagesIgnis.Migrations
 {
-    [DbContext(typeof(RazorPagesIgnisContext))]
+    [DbContext(typeof(IdentityContext))]
     [Migration("20190606135406_InitialCreate")]
     partial class InitialCreate
     {

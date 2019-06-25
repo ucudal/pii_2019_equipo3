@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Pages.Projects
 {
     public class CreateModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
 
-        public CreateModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public CreateModel(RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
         }

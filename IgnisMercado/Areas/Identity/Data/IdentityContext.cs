@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
@@ -16,6 +15,14 @@ namespace RazorPagesIgnis.Areas.Identity.Data
         {
         }
 
+        public DbSet<RazorPagesIgnis.Models.Project> Project { get; set; }
+        
+        public DbSet<RazorPagesIgnis.Models.Technician> Technician { get; set; }
+        
+        public DbSet<RazorPagesIgnis.Models.ProjectAssigned> ProjectAssigned { get; set; }
+        
+        public DbSet<RazorPagesIgnis.Models.Client> Client { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

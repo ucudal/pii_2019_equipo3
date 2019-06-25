@@ -27,7 +27,7 @@ namespace RazorPagesIgnis
                 try
                 {
                     var context=services.
-                        GetRequiredService<RazorPagesIgnisContext>();
+                        GetRequiredService<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>();
                     context.Database.Migrate();
                     SeedProjects.Initialize(services);
                     SeedTechnicians.Initialize(services);

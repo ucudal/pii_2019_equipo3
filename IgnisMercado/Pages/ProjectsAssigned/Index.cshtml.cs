@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Pages.ProjectsAssigned
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
 
-        public IndexModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public IndexModel(RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
         }

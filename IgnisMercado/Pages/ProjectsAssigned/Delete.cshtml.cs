@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Pages.ProjectsAssigned
 {
     public class DeleteModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
 
-        public DeleteModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public DeleteModel(RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
         }

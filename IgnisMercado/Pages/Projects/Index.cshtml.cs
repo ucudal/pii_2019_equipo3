@@ -11,9 +11,9 @@ namespace RazorPagesIgnis.Pages.Projects
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
 
-        public IndexModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public IndexModel(RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
         }

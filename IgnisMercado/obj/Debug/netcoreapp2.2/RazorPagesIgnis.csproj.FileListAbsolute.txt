@@ -268,60 +268,14 @@ C:\Users\jalca\Desktop\proyect\Proyecto2019\IgnisMercado\obj\Debug\netcoreapp2.2
 C:\Users\jalca\Desktop\proyect\Proyecto2019\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
 C:\Users\jalca\Desktop\proyect\Proyecto2019\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\jalca\Desktop\proyect\Proyecto2019\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CoreCompileInputs.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfoInputs.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfo.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.deps.json
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.json
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.dev.json
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.dll
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.dll
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.input.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.output.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorCoreGenerate.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Delete.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Details.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Edit.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Index.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Create.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Delete.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Details.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Edit.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Index.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Assign.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Create.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Delete.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Details.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Edit.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Index.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cache
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cs
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
-C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cache
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfo.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.deps.json
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.json
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.dev.json
@@ -329,12 +283,6 @@ C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.dll
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CoreCompileInputs.cache
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cache
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cs
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfoInputs.cache
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfo.cs
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.input.cache
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.output.cache
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorCoreGenerate.cache
@@ -373,6 +321,58 @@ C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cache
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cs
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
-C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.deps.json
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.json
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.dev.json
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.dll
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.dll
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CoreCompileInputs.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfoInputs.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.AssemblyInfo.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.input.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.TagHelpers.output.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorCoreGenerate.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Delete.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Details.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Edit.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Users\Index.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Create.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Delete.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Details.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Edit.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsAssigned\Index.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Assign.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Create.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Delete.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Details.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Edit.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Projects\Index.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cache
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cs
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
+C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete

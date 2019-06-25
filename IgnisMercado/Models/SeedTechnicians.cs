@@ -9,9 +9,9 @@ namespace RazorPagesIgnis.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new RazorPagesIgnisContext(
+            using (var context = new RazorPagesIgnis.Areas.Identity.Data.IdentityContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<RazorPagesIgnisContext>>()))
+                    DbContextOptions<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>>()))
             {
                 // Look for any movies.
                 if (context.Technician.Any())

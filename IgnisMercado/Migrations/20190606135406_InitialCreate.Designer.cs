@@ -5,11 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
+
 
 namespace RazorPagesIgnis.Migrations
 {
-    [DbContext(typeof(RazorPagesIgnisContext))]
-    [Migration("20190610003755_InitialCreate")]
+    [DbContext(typeof(IdentityContext))]
+    [Migration("20190606135406_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,16 +36,30 @@ namespace RazorPagesIgnis.Migrations
                     b.ToTable("Client");
                 });
 
+            modelBuilder.Entity("RazorPagesIgnis.Models.Feedback", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Comment");
+
+                    b.Property<bool>("Positive");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Feedback");
+                });
+
             modelBuilder.Entity("RazorPagesIgnis.Models.Project", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Client");
+
                     b.Property<string>("Description");
 
                     b.Property<string>("Level");
-
-                    b.Property<int>("NHours");
 
                     b.Property<string>("Specialty");
 
@@ -57,11 +73,11 @@ namespace RazorPagesIgnis.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Client");
+
                     b.Property<string>("Description");
 
                     b.Property<string>("Level");
-
-                    b.Property<int>("NHours");
 
                     b.Property<string>("Specialty");
 
@@ -72,6 +88,32 @@ namespace RazorPagesIgnis.Migrations
                     b.HasIndex("TechnicianID");
 
                     b.ToTable("ProjectAssigned");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Client");
+
+                    b.Property<string>("Description");
+
+                    b.Property<int?>("FeedbackID");
+
+                    b.Property<string>("Level");
+
+                    b.Property<string>("Specialty");
+
+                    b.Property<int?>("TechnicianID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FeedbackID");
+
+                    b.HasIndex("TechnicianID");
+
+                    b.ToTable("ProjectFinished");
                 });
 
             modelBuilder.Entity("RazorPagesIgnis.Models.Technician", b =>
@@ -96,6 +138,17 @@ namespace RazorPagesIgnis.Migrations
 
             modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
                 {
+                    b.HasOne("RazorPagesIgnis.Models.Technician", "Technician")
+                        .WithMany()
+                        .HasForeignKey("TechnicianID");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
+                {
+                    b.HasOne("RazorPagesIgnis.Models.Feedback", "Feedback")
+                        .WithMany()
+                        .HasForeignKey("FeedbackID");
+
                     b.HasOne("RazorPagesIgnis.Models.Technician", "Technician")
                         .WithMany()
                         .HasForeignKey("TechnicianID");

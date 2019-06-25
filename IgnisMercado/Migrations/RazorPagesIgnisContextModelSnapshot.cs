@@ -4,10 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Migrations
 {
-    [DbContext(typeof(RazorPagesIgnisContext))]
+    [DbContext(typeof(IdentityContext))]
     partial class RazorPagesIgnisContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

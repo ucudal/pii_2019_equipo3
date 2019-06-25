@@ -37,7 +37,7 @@ namespace RazorPagesIgnis
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<RazorPagesIgnisContext>(options =>
+            services.AddDbContext<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("IgnisContext")));
 
             //services.AddDefaultIdentity<ApplicationUser>();

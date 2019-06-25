@@ -13281,11 +13281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
       "projectName": "RazorPagesIgnis",
-      "projectPath": "c:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "projectPath": "C:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\obj\\",
+      "outputPath": "C:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
+using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Pages.Projects
 {
     public class AssignModel : PageModel
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
 
-        public AssignModel(RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public AssignModel(RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
         }
@@ -22,8 +23,7 @@ namespace RazorPagesIgnis.Pages.Projects
 
         public Project Project { get; set; }
 
-        public int? TechnicianID;
-        public Technician TechnicianSelected;
+        public Technician TechnicianSelected { get; set; }
 
         public async Task OnGetAsync(int? id)
         {
@@ -38,19 +38,20 @@ namespace RazorPagesIgnis.Pages.Projects
             }
             Technician = await technicians.ToListAsync();
         }
-        public async Task<IActionResult> OnPostAsync(int? id, int? technicianID)
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || technicianID == null) 
+            if (id == null)
             {
                 return NotFound();
             }
 
             Project = await _context.Project.FindAsync(id);
-            TechnicianSelected = await _context.Technician.FindAsync(technicianID);
+            TechnicianSelected = await _context.Technician.FindAsync(id);
 
-            if (Project != null && TechnicianSelected != null)
+            if (Project != null)
             {
                 ProjectAssigned NewProject = new ProjectAssigned();
+                NewProject.ID = Project.ID;
                 NewProject.Specialty = Project.Specialty;
                 NewProject.Level = Project.Level;
                 NewProject.Description = Project.Description;

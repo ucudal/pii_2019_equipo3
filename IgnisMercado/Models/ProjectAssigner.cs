@@ -10,10 +10,10 @@ namespace RazorPagesIgnis.Models
 {
     public class ProjectAssigner
     {
-        private readonly RazorPagesIgnis.Models.RazorPagesIgnisContext _context;
+        private readonly RazorPagesIgnis.Areas.Identity.Data.IdentityContext _context;
         public Technician Technician { set; get;}
         public Project Project { set; get;}
-        public ProjectAssigner(Project project, Technician technician, RazorPagesIgnis.Models.RazorPagesIgnisContext context)
+        public ProjectAssigner(Project project, Technician technician, RazorPagesIgnis.Areas.Identity.Data.IdentityContext context)
         {
             _context = context;
             Technician = technician;

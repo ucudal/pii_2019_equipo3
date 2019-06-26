@@ -2,17 +2,15 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPagesIgnis.Areas.Identity.Data;
 
-namespace RazorPagesIgnis.Migrations.Identity
+namespace RazorPagesIgnis.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20190609194833_Identity")]
-    partial class Identity
+    partial class IdentityContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -185,6 +183,122 @@ namespace RazorPagesIgnis.Migrations.Identity
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("RazorPagesIgnis.Models.Client", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Age");
+
+                    b.Property<string>("Mail");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Client");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.Feedback", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Comment");
+
+                    b.Property<bool>("Positive");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Feedback");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.Project", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Level");
+
+                    b.Property<int>("NHours");
+
+                    b.Property<string>("Specialty");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Project");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Level");
+
+                    b.Property<int>("NHours");
+
+                    b.Property<string>("Specialty");
+
+                    b.Property<int?>("TechnicianID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TechnicianID");
+
+                    b.ToTable("ProjectAssigned");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<int?>("FeedbackID");
+
+                    b.Property<string>("Level");
+
+                    b.Property<int>("NHours");
+
+                    b.Property<string>("Specialty");
+
+                    b.Property<int?>("TechnicianID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FeedbackID");
+
+                    b.HasIndex("TechnicianID");
+
+                    b.ToTable("ProjectFinished_1");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.Technician", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Age");
+
+                    b.Property<string>("Level");
+
+                    b.Property<string>("Mail");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Specialty");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Technician");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -228,6 +342,24 @@ namespace RazorPagesIgnis.Migrations.Identity
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectAssigned", b =>
+                {
+                    b.HasOne("RazorPagesIgnis.Models.Technician", "Technician")
+                        .WithMany()
+                        .HasForeignKey("TechnicianID");
+                });
+
+            modelBuilder.Entity("RazorPagesIgnis.Models.ProjectFinished", b =>
+                {
+                    b.HasOne("RazorPagesIgnis.Models.Feedback", "Feedback")
+                        .WithMany()
+                        .HasForeignKey("FeedbackID");
+
+                    b.HasOne("RazorPagesIgnis.Models.Technician", "Technician")
+                        .WithMany()
+                        .HasForeignKey("TechnicianID");
                 });
 #pragma warning restore 612, 618
         }

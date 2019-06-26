@@ -376,3 +376,8 @@ C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\D
 C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
 C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\jalca\Desktop\proyecto\Proyecto2019\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsFinished\Create.g.cshtml.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsFinished\Delete.g.cshtml.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsFinished\Details.g.cshtml.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsFinished\Edit.g.cshtml.cs
+C:\Users\usuario\Desktop\Programacion 2\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\ProjectsFinished\Index.g.cshtml.cs

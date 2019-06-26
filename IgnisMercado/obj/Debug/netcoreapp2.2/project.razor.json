@@ -2988,6 +2988,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Pages\\ProjectsFinished\\Create.cshtml",
+      "TargetPath": "Pages\\ProjectsFinished\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Pages\\ProjectsAssigned\\Edit.cshtml",
       "TargetPath": "Pages\\ProjectsAssigned\\Edit.cshtml",
       "FileKind": "mvc"
@@ -3058,6 +3063,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Pages\\ProjectsFinished\\Delete.cshtml",
+      "TargetPath": "Pages\\ProjectsFinished\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Pages\\Projects\\Details.cshtml",
       "TargetPath": "Pages\\Projects\\Details.cshtml",
       "FileKind": "mvc"
@@ -3068,6 +3078,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Pages\\ProjectsFinished\\Edit.cshtml",
+      "TargetPath": "Pages\\ProjectsFinished\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Areas\\Identity\\Pages\\Users\\Edit.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Users\\Edit.cshtml",
       "FileKind": "mvc"
@@ -3075,6 +3090,11 @@
     {
       "FilePath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsFinished\\Index.cshtml",
+      "TargetPath": "Pages\\ProjectsFinished\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3095,6 +3115,11 @@
     {
       "FilePath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Pages\\ProjectsFinished\\Details.cshtml",
+      "TargetPath": "Pages\\ProjectsFinished\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

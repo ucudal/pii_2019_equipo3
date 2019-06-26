@@ -276,7 +276,7 @@ namespace RazorPagesIgnis.Migrations
 
                     b.HasIndex("TechnicianID");
 
-                    b.ToTable("ProjectFinished_1");
+                    b.ToTable("ProjectFinished");
                 });
 
             modelBuilder.Entity("RazorPagesIgnis.Models.Technician", b =>

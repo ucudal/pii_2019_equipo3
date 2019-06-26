@@ -241,7 +241,7 @@ namespace RazorPagesIgnis.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectFinished_1",
+                name: "ProjectFinished",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -255,15 +255,15 @@ namespace RazorPagesIgnis.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectFinished_1", x => x.ID);
+                    table.PrimaryKey("PK_ProjectFinished", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_ProjectFinished_1_Feedback_FeedbackID",
+                        name: "FK_ProjectFinished_Feedback_FeedbackID",
                         column: x => x.FeedbackID,
                         principalTable: "Feedback",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ProjectFinished_1_Technician_TechnicianID",
+                        name: "FK_ProjectFinished_Technician_TechnicianID",
                         column: x => x.TechnicianID,
                         principalTable: "Technician",
                         principalColumn: "ID",
@@ -313,13 +313,13 @@ namespace RazorPagesIgnis.Migrations
                 column: "TechnicianID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectFinished_1_FeedbackID",
-                table: "ProjectFinished_1",
+                name: "IX_ProjectFinished_FeedbackID",
+                table: "ProjectFinished",
                 column: "FeedbackID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectFinished_1_TechnicianID",
-                table: "ProjectFinished_1",
+                name: "IX_ProjectFinished_TechnicianID",
+                table: "ProjectFinished",
                 column: "TechnicianID");
         }
 
@@ -350,7 +350,7 @@ namespace RazorPagesIgnis.Migrations
                 name: "ProjectAssigned");
 
             migrationBuilder.DropTable(
-                name: "ProjectFinished_1");
+                name: "ProjectFinished");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

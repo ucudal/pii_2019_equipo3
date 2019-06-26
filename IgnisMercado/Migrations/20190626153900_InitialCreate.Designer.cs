@@ -9,7 +9,7 @@ using RazorPagesIgnis.Areas.Identity.Data;
 namespace RazorPagesIgnis.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20190625232300_InitialCreate")]
+    [Migration("20190626153900_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -278,7 +278,7 @@ namespace RazorPagesIgnis.Migrations
 
                     b.HasIndex("TechnicianID");
 
-                    b.ToTable("ProjectFinished_1");
+                    b.ToTable("ProjectFinished");
                 });
 
             modelBuilder.Entity("RazorPagesIgnis.Models.Technician", b =>

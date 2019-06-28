@@ -1,3 +1,4 @@
+@using RazorPagesIgnis.Areas.Identity.Data
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +39,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/ProjectsAssigned/index">Proyectos Asignados</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Users/Index">Usuarios</a>   
+                            @if (User.IsInRole(IdentityData.AdminRoleName))
+                            {
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Users/Index">Usuarios</a>
+                            }   
                         </li>
                        
                         <li class="nav-item">

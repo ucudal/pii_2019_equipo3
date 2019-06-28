@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\usuario\\Desktop\\Programacion 2\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
+  "FilePath": "c:\\Users\\jalca\\Desktop\\proyecto\\Proyecto2019\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -203,7 +203,7 @@
             "IsEnum": false,
             "IndexerNamePrefix": null,
             "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            The name of the action method.\n            </summary>\n            <remarks>\n            Must be <c>null</c> if <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Route\" /> or <see cref=\"P:Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper.Page\" /> is non-<c>null</c>.\n            </remarks>\n        ",
+            "Documentation": null,
             "Diagnostics": [],
             "Metadata": {
               "Common.PropertyName": "Action"

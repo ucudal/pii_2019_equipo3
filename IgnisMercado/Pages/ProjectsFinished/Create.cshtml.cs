@@ -34,7 +34,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
                 return Page();
             }
 
-            _context.ProjectFinished_1.Add(ProjectFinished);
+            _context.ProjectFinished.Add(ProjectFinished);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

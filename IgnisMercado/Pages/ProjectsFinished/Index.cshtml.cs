@@ -23,7 +23,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
 
         public async Task OnGetAsync()
         {
-            ProjectFinished = await _context.ProjectFinished_1.ToListAsync();
+            ProjectFinished = await _context.ProjectFinished.ToListAsync();
         }
     }
 }

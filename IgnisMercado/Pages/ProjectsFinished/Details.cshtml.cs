@@ -28,7 +28,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
                 return NotFound();
             }
 
-            ProjectFinished = await _context.ProjectFinished_1.FirstOrDefaultAsync(m => m.ID == id);
+            ProjectFinished = await _context.ProjectFinished.FirstOrDefaultAsync(m => m.ID == id);
 
             if (ProjectFinished == null)
             {

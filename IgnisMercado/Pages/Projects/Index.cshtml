@@ -1,4 +1,6 @@
 @page
+@using Microsoft.AspNetCore.Identity
+@using RazorPagesIgnis.Areas.Identity.Data
 @model RazorPagesIgnis.Pages.Projects.IndexModel
 
 @{
@@ -47,7 +49,10 @@
                 <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a> |
-                <a asp-page="./Assign" asp-route-id="@item.ID">Asignar</a>
+                @if (User.IsInRole(IdentityData.AdminRoleName))
+                {
+                    <a asp-page="./Assign" asp-route-id="@item.ID">Asignar</a>
+                }
             </td>   
         </tr>
 }

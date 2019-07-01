@@ -30,7 +30,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
                 return NotFound();
             }
 
-            ProjectFinished = await _context.ProjectFinished_1.FirstOrDefaultAsync(m => m.ID == id);
+            ProjectFinished = await _context.ProjectFinished.FirstOrDefaultAsync(m => m.ID == id);
 
             if (ProjectFinished == null)
             {
@@ -69,7 +69,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
 
         private bool ProjectFinishedExists(int id)
         {
-            return _context.ProjectFinished_1.Any(e => e.ID == id);
+            return _context.ProjectFinished.Any(e => e.ID == id);
         }
     }
 }

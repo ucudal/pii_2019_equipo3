@@ -1,0 +1,39 @@
+@page
+@model RazorPagesIgnis.Pages.Projects.FinishModel
+
+@{
+    ViewData["Title"] = "Finish Technician";
+}
+
+<h1>Finalizar proyecto</h1>
+
+<h4>Proyecto</h4>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Feedback.ID" />
+            <div class="form-group">
+                <label asp-for="Feedback.Positive" class="control-label">¿Volvería a contratar al técnico para proyectos futuros?</label>
+                <input asp-for="Feedback.Positive" class="form-control" />
+                <span asp-validation-for="Feedback.Positive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Feedback.Comment" class="control-label">¿Por qué?</label>
+                <input asp-for="Feedback.Comment" class="form-control" />
+                <span asp-validation-for="Feedback.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

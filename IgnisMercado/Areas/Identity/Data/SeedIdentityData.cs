@@ -1,19 +1,25 @@
 using System;
+using System.Linq;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RazorPagesIgnis.Models;
 
+/* 
+Esta clase es la que crea las instancias de administradores, clientes y tecnicos ya 
+que es la que tiene los datos necesario para ello por esto cumple, 
+con el patrón Expert y a su vez cumple con el patrón Creator. 
+
+Inicializa en la base de datos de identidad los usuarios y roles necesarios 
+para el funcionamiento de la aplicacion la primera vez que se ejecuta.
+
+Crea los usuarios y roles necesarios para el funcionamiento de la aplicacion si ya no existente.
+*/
+
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
-    /// <summary>
-    /// Inicializa en la base de datos de identidad los usuarios y roles necesarios para el funcionamiento de la aplicaci�n
-    /// la primera vez que se ejecuta.
-    /// </summary>
     public static class SeedIdentityData
     {
-        /// <summary>
-        /// Crea los usuarios y roles necesarios para el funcionamiento de la aplicaci�n si ya no existente.
-        /// </summary>
         /// <param name="serviceProvider">El <see cref="IServiceProvider"/> al que se han injectado previamente un
         /// <see cref="UserManager<T>"/> y un <see cref="RoleManager<T>"/>.</param>
         public static void Initialize(IServiceProvider serviceProvider)
@@ -28,9 +34,10 @@ namespace RazorPagesIgnis.Areas.Identity.Data
 
         private static void SeedUsers(UserManager<ApplicationUser> userManager)
         {
-            // Crea el primer y �nico administrador si no existe. Primero crea un usuario y luego se asigna el rol de adminstrador.
+            // Crea el primer administrador si no existe. Primero crea un usuario y luego se asigna el rol de adminstrador.
             if (userManager.FindByNameAsync(IdentityData.AdminUserName).Result == null)
             {
+                ApplicationUser user = new ApplicationUser();
                 ApplicationUser admin = new ApplicationUser();
                 try
                 {
@@ -41,60 +48,27 @@ namespace RazorPagesIgnis.Areas.Identity.Data
                     
                     throw e;
                 }  
-                admin.UserName = IdentityData.AdminUserName;
-                admin.Email = IdentityData.AdminMail;
-                admin.DOB = IdentityData.AdminDOB;
-
-                ApplicationUser tech = new ApplicationUser();
-                try
-                {
-                    tech.Name = IdentityData.TechName;
-                }
-                catch (InvalidOperationException e)
-                {
-                    
-                    throw e;
-                }
-                tech.UserName = IdentityData.TechUserName;
-                tech.Email = IdentityData.TechMail;
-                tech.DOB = IdentityData.TechDOB;
-
-                ApplicationUser client = new ApplicationUser();
-                try
-                {
-                    client.Name = IdentityData.ClientName;
-                }
-                catch (InvalidOperationException e)
-                {
-                    throw e;
-                }
-                client.UserName = IdentityData.ClientUserName;
-                client.Email = IdentityData.ClientMail;
-                client.DOB = IdentityData.ClientDOB;
-
+                user.UserName = IdentityData.AdminUserName;
+                user.Email = IdentityData.AdminMail;
+                user.DOB = IdentityData.AdminDOB;
                 // Es necesario tener acceso a RoleManager para poder buscar el rol de este usuario; se asigna aquí para poder
                 // buscar por rol después cuando no hay acceso a RoleManager.
-                admin.AssignRole(userManager, IdentityData.AdminRoleName);
-                tech.AssignRole(userManager, IdentityData.TechRoleName);
-                client.AssignRole(userManager, IdentityData.ClientRoleName);
+                user.AssignRole(userManager, IdentityData.AdminRoleName);
 
-                IdentityResult result1 = userManager.CreateAsync(admin, IdentityData.AdminPassword).Result;
-                IdentityResult result2 = userManager.CreateAsync(tech, IdentityData.AdminPassword).Result;
-                IdentityResult result3 = userManager.CreateAsync(client, IdentityData.AdminPassword).Result;
-                if (result1.Succeeded && result2.Succeeded && result3.Succeeded)
+                IdentityResult result = userManager.CreateAsync(user, IdentityData.AdminPassword).Result;
+
+                if (result.Succeeded)
                 {
-                    IdentityResult addRoleResult1 = userManager.AddToRoleAsync(admin, IdentityData.AdminRoleName).Result;
-                    IdentityResult addRoleResult2 = userManager.AddToRoleAsync(tech, IdentityData.TechRoleName).Result;
-                    IdentityResult addRoleResult3 = userManager.AddToRoleAsync(client, IdentityData.ClientRoleName).Result;
-                    if (!addRoleResult1.Succeeded || !addRoleResult2.Succeeded || !addRoleResult3.Succeeded)
+                    IdentityResult addRoleResult = userManager.AddToRoleAsync(user, IdentityData.AdminRoleName).Result;
+                    if (!addRoleResult.Succeeded)
                     {
                         throw new InvalidOperationException(
-                            "Unexpected error ocurred adding role to user.");
+                            $"Unexpected error ocurred adding role '{IdentityData.AdminRoleName}' to user '{IdentityData.AdminName}'.");
                     }
                 }
                 else
                 {
-                    throw new InvalidOperationException("Unexpected error ocurred creating user.");
+                    throw new InvalidOperationException($"Unexpected error ocurred creating user '{IdentityData.AdminName}'.");
                 }
             }
         }
@@ -129,7 +103,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
 
                 if (context.Client.Any()){
                     Console.WriteLine("RETURN");
-                    return;   // DB has been seeded
+                    return;  
                 };
             }
 
@@ -148,7 +122,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             using (var context = new IdentityContext(serviceProvider.GetRequiredService<DbContextOptions<IdentityContext>>())){
 
                 if (context.Technician.Any()){
-                    return;   // DB has been seeded
+                    return;  
                 };
             }
 

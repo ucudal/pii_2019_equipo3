@@ -1,18 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Linq;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 using RazorPagesIgnis.Areas.Identity.Data;
 
-
 /* 
-Client hereda de Person, tiene los atributos 
-de dicha clase abstracta y a su vez tiene una lista de projectos.  
+Client hereda de AplicationUser y esta a su vez hereda de la clase IdentityUser,
+ tiene los atributos de dicha clase y a su vez tiene una lista de projectos.  
 */
-
 
 namespace RazorPagesIgnis.Models
 {

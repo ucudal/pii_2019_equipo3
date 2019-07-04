@@ -1,5 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations;
 
 /* 
 Creamos esta interface como base ya que existen 3 tipos de proyectos distintos  

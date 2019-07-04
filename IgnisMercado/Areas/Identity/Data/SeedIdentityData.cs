@@ -44,9 +44,16 @@ namespace RazorPagesIgnis.Areas.Identity.Data
                 // buscar por rol después cuando no hay acceso a RoleManager.
                 user.AssignRole(userManager, IdentityData.AdminRoleName);
 
+<<<<<<< Updated upstream
                 IdentityResult result = userManager.CreateAsync(user, IdentityData.AdminPassword).Result;
 
                 if (result.Succeeded)
+=======
+                IdentityResult result1 = userManager.CreateAsync(admin, IdentityData.AdminPassword).Result;
+                IdentityResult result2 = userManager.CreateAsync(tech, IdentityData.TechPassword).Result;
+                IdentityResult result3 = userManager.CreateAsync(client, IdentityData.ClientPassword).Result;
+                if (result1.Succeeded && result2.Succeeded && result3.Succeeded)
+>>>>>>> Stashed changes
                 {
                     IdentityResult addRoleResult = userManager.AddToRoleAsync(user, IdentityData.AdminRoleName).Result;
                     if (!addRoleResult.Succeeded)

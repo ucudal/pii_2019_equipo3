@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
 using RazorPagesIgnis.Areas.Identity.Data;
 
-namespace RazorPagesIgnis.Pages.Projects
+namespace RazorPagesIgnis.Pages.ProjectsFinished
 {
     public class FinishModel : PageModel
     {
@@ -22,7 +22,10 @@ namespace RazorPagesIgnis.Pages.Projects
         [BindProperty]
         public ProjectAssigned Project { get; set; }
 
-        public Feedback Feedback { get; set; }
+        public Boolean Positive { get; set; }
+
+        public String Comment { get; set; }
+        public IList<ProjectAssigned> Projects { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -40,17 +43,33 @@ namespace RazorPagesIgnis.Pages.Projects
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int? id, Boolean Positive, String Comment)
         {
             if (id == null)
             {
                 return NotFound();
             }
+            Feedback Feedback = new Feedback();
+            Feedback.Positive = Positive;
+            Feedback.Comment = Comment;
 
-            Project = await _context.ProjectAssigned.FindAsync(id);
+            Projects = await _context.ProjectAssigned
+                .Include(e => e.Technician)
+                .Include(d => d.Client).ToListAsync();
+            
+            Projects = Projects.Where(s => s.ID.Equals(id)).ToList();;
+
+            Project = Projects[0];
+            
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
             if (Project != null)
             {
+                _context.Feedback.Add(Feedback);
+
                 ProjectFinished NewProject = new ProjectFinished();
                 NewProject.ID = Project.ID;
                 NewProject.Specialty = Project.Specialty;
@@ -58,6 +77,7 @@ namespace RazorPagesIgnis.Pages.Projects
                 NewProject.Description = Project.Description;
                 NewProject.NHours = Project.NHours;
                 NewProject.Technician = Project.Technician;
+                NewProject.Client = Project.Client;
                 NewProject.Feedback = Feedback;
 
                 _context.ProjectAssigned.Remove(Project);

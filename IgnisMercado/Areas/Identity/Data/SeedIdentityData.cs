@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using RazorPagesIgnis.Models;
 
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
@@ -21,6 +22,8 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             SeedRoles(roleManager);
             SeedUsers(userManager);
+            SeedClients(userManager,serviceProvider);
+            SeedTechnicians(userManager,serviceProvider);
         }
 
         private static void SeedUsers(UserManager<ApplicationUser> userManager)
@@ -118,6 +121,115 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             foreach (var roleName in IdentityData.NonAdminRoleNames)
             {
                 CreateRole(roleManager, roleName);
+            }
+        }
+        private static void SeedClients(UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider)
+        {   
+            using (var context = new IdentityContext(serviceProvider.GetRequiredService<DbContextOptions<IdentityContext>>())){
+
+                if (context.Client.Any()){
+                    Console.WriteLine("RETURN");
+                    return;   // DB has been seeded
+                };
+            }
+
+            for (int i = 0; i < Clients.ClientNames.Count(); i++)
+            {
+                Console.WriteLine("numero de clientes " + i.ToString());
+                CreateClient(Clients.ClientNames[i],
+                Clients.ClientDOBs[i],
+                Clients.ClientMail[i],
+                IdentityData.AdminPassword,
+                userManager);
+            }
+        }
+        private static void SeedTechnicians(UserManager<ApplicationUser> userManager, IServiceProvider serviceProvider)
+        {   
+            using (var context = new IdentityContext(serviceProvider.GetRequiredService<DbContextOptions<IdentityContext>>())){
+
+                if (context.Technician.Any()){
+                    return;   // DB has been seeded
+                };
+            }
+
+            for (int i = 0; i <= Technicians.TechnicianNames.Count()-1; i++)
+            {
+                Console.WriteLine("numero de tecnicos " + i.ToString());
+                CreateTechnician(
+                Technicians.TechnicianNames[i],
+                Technicians.TechnicianDOBs[i],
+                Technicians.TechnicianMail[i],
+                IdentityData.AdminPassword,
+                Technicians.Specialities[i],
+                Technicians.Levels[i],
+                userManager);
+            }
+        }
+        private static void CreateClient(
+        string name,
+        DateTime dob,
+        string email,
+        string password,
+        UserManager<ApplicationUser> userManager)
+        {
+             var user = new Client {
+                    Name = name,
+                    UserName = email,
+                    Email = email,
+                    DOB = dob
+                };
+            user.AssignRole(userManager, IdentityData.NonAdminRoleNames[0]);
+
+            IdentityResult result = userManager.CreateAsync(user, password).Result;
+
+            if (result.Succeeded)
+            {
+                IdentityResult addRoleResult = userManager.AddToRoleAsync(user, IdentityData.NonAdminRoleNames[0]).Result;
+                if (!addRoleResult.Succeeded)
+                {
+                    throw new InvalidOperationException(
+                        $"Unexpected error ocurred adding role '{IdentityData.NonAdminRoleNames[0]}' to user '{name}'.");
+                }
+            }
+            else
+            {
+                throw new InvalidOperationException($"Unexpected error ocurred creating user '{name}'.");
+            }
+        }
+        private static void CreateTechnician(
+        string name,
+        DateTime dob,
+        string email,
+        string password,
+        string rol,
+        string level,
+        UserManager<ApplicationUser> userManager)
+        {
+            
+            var user = new Technician {
+                    Name = name,
+                    DOB = dob,
+                    UserName = email,
+                    Email = email
+                };
+            user.Specialty=rol;
+            user.Level=level;
+            user.AssignRole(userManager, IdentityData.NonAdminRoleNames[1]);
+
+            IdentityResult result = userManager.CreateAsync(user, password).Result;
+
+            if (result.Succeeded)
+            {
+                IdentityResult addRoleResult = userManager.AddToRoleAsync(user, IdentityData.NonAdminRoleNames[1]).Result;
+                if (!addRoleResult.Succeeded)
+                {
+                    throw new InvalidOperationException(
+                        $"Unexpected error ocurred adding role '{IdentityData.NonAdminRoleNames[1]}' to user '{name}'.");
+                }
+            }
+            else
+            {
+                throw new InvalidOperationException($"Unexpected error ocurred creating user '{name}'.");
             }
         }
     }

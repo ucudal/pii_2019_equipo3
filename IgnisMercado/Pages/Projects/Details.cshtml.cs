@@ -20,6 +20,7 @@ namespace RazorPagesIgnis.Pages.Projects
         }
 
         public Project Project { get; set; }
+        public IList<Project> Projects { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,7 +29,12 @@ namespace RazorPagesIgnis.Pages.Projects
                 return NotFound();
             }
 
-            Project = await _context.Project.FirstOrDefaultAsync(m => m.ID == id);
+            Projects = await _context.Project
+                .Include(d => d.Client).ToListAsync();
+            
+            Projects = Projects.Where(m => m.ID == id).ToList();;
+
+            Project = Projects[0];
 
             if (Project == null)
             {

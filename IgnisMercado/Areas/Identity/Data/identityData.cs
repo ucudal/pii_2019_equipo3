@@ -1,4 +1,5 @@
 using System;
+using RazorPagesIgnis.Models;
 
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
@@ -16,30 +17,57 @@ namespace RazorPagesIgnis.Areas.Identity.Data
 
         public const string AdminRoleName = "Administrator";
 
-        public static string[] NonAdminRoleNames = new string[] { "Cliente", "Técnico" };
-        public const string TechUserName = "Manuel_García";
-
-        public const string TechName = "Manuel García";
-
-        public const string TechMail = "tech@ignis.com";
-
-        public static DateTime TechDOB = new DateTime(1999, 2, 12);
-
-        public const string TechPassword = "P@55w0rd";
-
-        public const string TechRoleName = "Técnico";
-        
-        public const string ClientUserName = "Juan_Rodriguez";
-
-        public const string ClientName = "Juan Rodriguez";
-
-        public const string ClientMail = "client@ignis.com";
-
-        public static DateTime ClientDOB = new DateTime(1977, 12, 22);
-
-        public const string ClientPassword = "P@55w0rd";
-
-        public const string ClientRoleName = "Cliente";
-
+        public static string[] NonAdminRoleNames = new string[] { "Client", "Technician" };
+    }
+    public static class Clients
+    {
+        public static string[] ClientNames = new string [] {
+        "Asuntos estudiantiles (UCU)",
+        "Biblioteca (UCU)",
+        "FIC (UCU)",
+        };
+        public static string[] ClientMail = new string [] {
+        "asuntosestudiantiles@oignis.com",
+        "biblioteca@ignis.com",
+        "fic@ignis.com",
+        };
+        public static DateTime[] ClientDOBs = new DateTime [] {
+        DateTime.Parse("1998-10-05"),
+        DateTime.Parse("1995-07-08"),
+        DateTime.Parse("2000-02-01"),
+        };
+    }
+    public static class Technicians
+    {   
+        public static string[] TechnicianNames = new string [] 
+        {
+            "Juan Martinez",
+            "Jose Rodriguez",
+            "Manuel Garcia"        
+        };
+        public static string[] TechnicianMail = new string [] 
+        {
+            "jmartinez@ignis.com",
+            "jrodriguez@ignis.com",
+            "mgarcia@ignis.com"
+        };
+        public static DateTime[] TechnicianDOBs = new DateTime[]
+        {
+            DateTime.Parse("1999-01-01"),
+            DateTime.Parse("1992-10-12"),
+            DateTime.Parse("1974-07-03"),
+        };
+        public static string[] Specialities = new string[]
+        {
+            "Fotógrafo",
+            "Fotógrafo",
+            "Sonidista",
+        };
+        public static string[] Levels = new string[]
+        {
+            "Intermedio",
+            "Avanzado",
+            "Intermedio",
+        };
     }
 }

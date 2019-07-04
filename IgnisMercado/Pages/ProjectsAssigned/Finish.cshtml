@@ -1,5 +1,5 @@
 @page
-@model RazorPagesIgnis.Pages.Projects.FinishModel
+@model RazorPagesIgnis.Pages.ProjectsFinished.FinishModel
 
 @{
     ViewData["Title"] = "Finish Technician";
@@ -12,19 +12,18 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Feedback.ID" />
             <div class="form-group">
-                <label asp-for="Feedback.Positive" class="control-label">¿Volvería a contratar al técnico para proyectos futuros?</label>
-                <input asp-for="Feedback.Positive" class="form-control" />
-                <span asp-validation-for="Feedback.Positive" class="text-danger"></span>
+                <label asp-for="Positive" class="control-label">¿Volvería a contratar al técnico para proyectos futuros?</label>
+                <input asp-for="Positive" class="form-control" />
+                <span asp-validation-for="Positive" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Feedback.Comment" class="control-label">¿Por qué?</label>
-                <input asp-for="Feedback.Comment" class="form-control" />
-                <span asp-validation-for="Feedback.Comment" class="text-danger"></span>
+                <label asp-for="Comment" class="control-label">¿Por qué?</label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>

@@ -31,10 +31,22 @@
             @Html.DisplayFor(model => model.ProjectAssigned.Description)
         </dd>
         <dt class="col-sm-2">
-            Cantidad de horas
+            Nº de horas
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ProjectAssigned.NHours)
+        </dd>
+        <dt class="col-sm-2">
+            Cliente
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Client.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Técnico
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectAssigned.Technician.Name)
         </dd>
     </dl>
     

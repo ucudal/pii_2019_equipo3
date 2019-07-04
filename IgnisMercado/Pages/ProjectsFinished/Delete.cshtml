@@ -13,28 +13,52 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ProjectFinished.Specialty)
+            Especialidad
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ProjectFinished.Specialty)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ProjectFinished.Level)
+            Nivel
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ProjectFinished.Level)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ProjectFinished.Description)
+            Descripción
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ProjectFinished.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ProjectFinished.NHours)
+            Nº de horas
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ProjectFinished.NHours)
+        </dd>
+        <dt class="col-sm-2">
+            Cliente
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Client.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Técnico
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Technician.Name)
+        </dd>
+                <dt class="col-sm-2">
+            Desempeño positivo
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Feedback.Positive)
+        </dd>
+        <dt class="col-sm-2">
+            Comentario
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Feedback.Comment)
         </dd>
     </dl>
     

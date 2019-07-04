@@ -13304,11 +13304,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\RazorPagesIgnis.csproj",
       "projectName": "RazorPagesIgnis",
       "projectPath": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\RazorPagesIgnis.csproj",
       "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "projectName": "RazorPagesIgnis",
+      "projectPath": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

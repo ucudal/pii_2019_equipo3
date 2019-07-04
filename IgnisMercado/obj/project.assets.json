@@ -13304,19 +13304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "projectUniqueName": "c:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
       "projectName": "RazorPagesIgnis",
-      "projectPath": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\RazorPagesIgnis.csproj",
+      "projectPath": "c:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
       "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Federico\\Desktop\\pruebaaaaa final\\IgnisMercado\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
-      "projectName": "RazorPagesIgnis",
-      "projectPath": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\RazorPagesIgnis.csproj",
-      "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\obj\\",
->>>>>>> Stashed changes
+      "outputPath": "c:\\Users\\Federico\\Desktop\\branch\\pii_2019_equipo3\\IgnisMercado\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

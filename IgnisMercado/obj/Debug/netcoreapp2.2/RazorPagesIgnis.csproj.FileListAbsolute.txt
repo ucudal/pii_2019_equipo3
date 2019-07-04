@@ -435,16 +435,8 @@ C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcore
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\Razor\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cache
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cs
-<<<<<<< Updated upstream
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.deps.json
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.json
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.dev.json
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.dll
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.dll
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
 C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
@@ -507,9 +499,3 @@ C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\Debug\netcoreapp2.2\
 C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorTargetAssemblyInfo.cs
 C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
 C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
-=======
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.dll
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
-C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CopyComplete
->>>>>>> Stashed changes

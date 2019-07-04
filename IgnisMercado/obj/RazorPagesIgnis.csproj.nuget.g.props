@@ -3,11 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-<<<<<<< Updated upstream
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Federico\Desktop\pruebaaaaa final\IgnisMercado\obj\project.assets.json</ProjectAssetsFile>
-=======
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\project.assets.json</ProjectAssetsFile>
->>>>>>> Stashed changes
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Federico\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>

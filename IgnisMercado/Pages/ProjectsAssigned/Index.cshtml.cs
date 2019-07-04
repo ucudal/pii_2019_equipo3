@@ -24,7 +24,8 @@ namespace RazorPagesIgnis.Pages.ProjectsAssigned
         public async Task OnGetAsync()
         {
             ProjectAssigned = await _context.ProjectAssigned
-                .Include(d => d.Technician).ToListAsync();
+                .Include(d => d.Technician)
+                .Include(e => e.Client).ToListAsync();
         }
     }
 }

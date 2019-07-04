@@ -1,8 +1,12 @@
 @page
 @model RazorPagesIgnis.Pages.Projects.AssignModel
+@using Microsoft.AspNetCore.Identity
+@using RazorPagesIgnis.Areas.Identity.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @{
-    ViewData["Title"] = "Assign Technician";
+    ViewData["Title"] = "Asignar Técnico";
 }
 
 <h1>Asignar técnico</h1>
@@ -16,37 +20,30 @@
                 Nombre
             </th>
             <th>
-               Edad
+                Fecha de nacimiento
             </th>
             <th>
                 Nivel
-            </th>
-
-            <th>
-                Especialidad
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Technician) {
+@foreach (var item in Model.Technician) { 
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Age)
+                @Html.DisplayFor(modelItem => item.DOB)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Level)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Specialty)
-            </td>
-            <td>
-            <form method="post">
-                <input type="hidden" asp-for=Project />
-                <input type="submit" value="Seleccionar" class="btn btn-danger" />
+            <form method="post" asp-route-id="@Model.Project.ID" asp-route-technicianID="@item.Id">
+                <!-- <input type="hidden" asp-route-id="@item.Id" /> -->
+                <input type="submit" value="Select" class="btn btn-danger" />
             </form>
             </td>   
         </tr>
@@ -55,7 +52,7 @@
 </table>
 
 <div>
-    <a asp-page="./Index">Volver a la lista</a>
+    <a asp-page="./Index">Back to List</a>
 </div>
 
 @section Scripts {

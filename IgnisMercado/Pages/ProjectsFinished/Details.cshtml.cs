@@ -20,6 +20,7 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
         }
 
         public ProjectFinished ProjectFinished { get; set; }
+        public IList<ProjectFinished> Projects { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,7 +29,14 @@ namespace RazorPagesIgnis.Pages.ProjectsFinished
                 return NotFound();
             }
 
-            ProjectFinished = await _context.ProjectFinished.FirstOrDefaultAsync(m => m.ID == id);
+            Projects = await _context.ProjectFinished
+                .Include(d => d.Technician)
+                .Include(e => e.Client)
+                .Include(f => f.Feedback).ToListAsync();
+            
+            Projects = Projects.Where(m => m.ID == id).ToList();;
+
+            ProjectFinished = Projects[0];
 
             if (ProjectFinished == null)
             {

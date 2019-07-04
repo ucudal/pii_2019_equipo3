@@ -1,35 +1,52 @@
 @page
 @model RazorPagesIgnis.Pages.ProjectsFinished.IndexModel
+@using Microsoft.AspNetCore.Identity
+@using RazorPagesIgnis.Areas.Identity.Data
+@inject UserManager<ApplicationUser> UserManager
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Proyectos finalizados";
 }
 
-<h1>Index</h1>
+<h1>Proyectos finalizados.</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProjectFinished[0].Specialty)
+                Especialidad
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProjectFinished[0].Level)
+                Nivel
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProjectFinished[0].Description)
+                Descripción
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProjectFinished[0].NHours)
+                Nº de horas
+            </th>
+            @if(!User.IsInRole(IdentityData.NonAdminRoleNames[0]))
+            {
+                <th>
+                    Cliente
+                </th>
+            }
+            @if(!User.IsInRole(IdentityData.NonAdminRoleNames[1]))
+            {
+            <th>
+                Técnico
+            </th>
+            }
+            <th>
+                Feedback
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.ProjectFinished) {
+    @if(User.IsInRole(IdentityData.AdminRoleName) || @UserManager.GetUserId(User) == item.Technician.Id || @UserManager.GetUserId(User) == item.Client.Id)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Specialty)
@@ -43,12 +60,33 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NHours)
             </td>
+            @if(!User.IsInRole(IdentityData.NonAdminRoleNames[0]))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.Name)
+                </td>
+            }
+            @if(!User.IsInRole(IdentityData.NonAdminRoleNames[1]))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Technician.Name)
+                </td>
+            }
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                @Html.DisplayFor(modelItem => item.Feedback.Comment)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a>
+                @if(!User.IsInRole(IdentityData.NonAdminRoleNames[1]))
+                {
+                    <span>|</span>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a>
+                    <span>|</span>
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>
+                }
             </td>
         </tr>
+    }
 }
     </tbody>
 </table>

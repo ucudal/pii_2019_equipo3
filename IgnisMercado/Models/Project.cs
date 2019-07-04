@@ -1,5 +1,10 @@
 using System;
 
+/* 
+Project hereda de la interface IProject ya que es un tipo de 
+projecto (publicados) tiene los atributos de dicha interface. 
+*/
+
 namespace RazorPagesIgnis.Models
 {
     public class Project : IProject

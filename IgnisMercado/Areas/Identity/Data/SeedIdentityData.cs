@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace RazorPagesIgnis.Areas.Identity.Data
@@ -33,19 +29,42 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             if (userManager.FindByNameAsync(IdentityData.AdminUserName).Result == null)
             {
                 ApplicationUser admin = new ApplicationUser();
-                admin.Name = IdentityData.AdminName;
+                try
+                {
+                    admin.Name = IdentityData.AdminName;
+                }
+                catch (InvalidOperationException e)
+                {
+                    
+                    throw e;
+                }  
                 admin.UserName = IdentityData.AdminUserName;
                 admin.Email = IdentityData.AdminMail;
                 admin.DOB = IdentityData.AdminDOB;
 
                 ApplicationUser tech = new ApplicationUser();
-                tech.Name = IdentityData.TechName;
+                try
+                {
+                    tech.Name = IdentityData.TechName;
+                }
+                catch (InvalidOperationException e)
+                {
+                    
+                    throw e;
+                }
                 tech.UserName = IdentityData.TechUserName;
                 tech.Email = IdentityData.TechMail;
                 tech.DOB = IdentityData.TechDOB;
 
                 ApplicationUser client = new ApplicationUser();
-                client.Name = IdentityData.ClientName;
+                try
+                {
+                    client.Name = IdentityData.ClientName;
+                }
+                catch (InvalidOperationException e)
+                {
+                    throw e;
+                }
                 client.UserName = IdentityData.ClientUserName;
                 client.Email = IdentityData.ClientMail;
                 client.DOB = IdentityData.ClientDOB;

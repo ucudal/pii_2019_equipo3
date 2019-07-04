@@ -1,5 +1,9 @@
 @page
 @model RazorPagesIgnis.Pages.Projects.CreateModel
+@using Microsoft.AspNetCore.Identity
+@using RazorPagesIgnis.Areas.Identity.Data
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
 
 @{
     ViewData["Title"] = "Crear";
@@ -11,7 +15,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" asp-route-ClientId="@UserManager.GetUserId(User)">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Project.Specialty" class="control-label">Especialidad</label>
@@ -33,6 +37,14 @@
                 <input asp-for="Project.NHours" class="form-control" />
                 <span asp-validation-for="Project.NHours" class="text-danger"></span>
             </div>
+            @if(User.IsInRole(IdentityData.AdminRoleName))
+            {
+                <div class="form-group">
+                    <label asp-for="ClientUserName" class="control-label">Email del cliente</label>
+                    <input asp-for="ClientUserName" class="form-control" />
+                    <span asp-validation-for="ClientUserName" class="text-danger"></span>
+                </div>
+            }
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -22,7 +22,8 @@ namespace RazorPagesIgnis.Pages.Projects
 
         public async Task OnGetAsync()
         {
-            Project = await _context.Project.ToListAsync();
+            Project = await _context.Project
+                .Include(d => d.Client).ToListAsync();
         }
     }
 }

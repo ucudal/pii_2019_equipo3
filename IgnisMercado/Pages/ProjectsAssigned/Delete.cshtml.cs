@@ -21,6 +21,7 @@ namespace RazorPagesIgnis.Pages.ProjectsAssigned
 
         [BindProperty]
         public ProjectAssigned ProjectAssigned { get; set; }
+        public IList<ProjectAssigned> Projects { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,6 +31,14 @@ namespace RazorPagesIgnis.Pages.ProjectsAssigned
             }
 
             ProjectAssigned = await _context.ProjectAssigned.FirstOrDefaultAsync(m => m.ID == id);
+
+            Projects = await _context.ProjectAssigned
+                .Include(e => e.Technician)
+                .Include(d => d.Client).ToListAsync();
+            
+            Projects = Projects.Where(m => m.ID == id).ToList();;
+
+            ProjectAssigned = Projects[0];
 
             if (ProjectAssigned == null)
             {

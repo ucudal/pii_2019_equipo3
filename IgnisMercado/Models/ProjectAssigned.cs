@@ -11,5 +11,6 @@ namespace RazorPagesIgnis.Models
         public string Level { get; set; }
         public string Description { get; set; }
         public int NHours { get; set; }
+        public Client Client { get; set; }
     }
 }

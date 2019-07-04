@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 namespace RazorPagesIgnis.Models
 {
-    public class AssignClient
+    public class LinkProjectTechnician
     {
         [Key]
         public int ProjectID { get; set; }
 
         [Key]
-        public int ClientID { get; set; }
+        public int TechnicianID { get; set; }
 
         [Required]
         public Project Project { get; set; }
 
         [Required]
-        public Client Client { get; set; }
+        public Technician Technician { get; set; }
     }
 }

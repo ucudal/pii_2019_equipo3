@@ -201,12 +201,12 @@ namespace RazorPagesIgnis.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    TechnicianId = table.Column<string>(nullable: true),
                     Specialty = table.Column<string>(nullable: true),
                     Level = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     NHours = table.Column<int>(nullable: false),
-                    ClientId = table.Column<string>(nullable: true)
+                    ClientId = table.Column<string>(nullable: true),
+                    TechnicianId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -231,13 +231,13 @@ namespace RazorPagesIgnis.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    TechnicianId = table.Column<string>(nullable: true),
-                    FeedbackID = table.Column<int>(nullable: true),
                     Specialty = table.Column<string>(nullable: true),
                     Level = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     NHours = table.Column<int>(nullable: false),
-                    ClientId = table.Column<string>(nullable: true)
+                    ClientId = table.Column<string>(nullable: true),
+                    TechnicianId = table.Column<string>(nullable: true),
+                    FeedbackID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

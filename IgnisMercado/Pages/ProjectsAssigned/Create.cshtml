@@ -34,6 +34,16 @@
                 <span asp-validation-for="ProjectAssigned.NHours" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ClientUserName" class="control-label">Email del cliente</label>
+                <input asp-for="ClientUserName" class="form-control" />
+                <span asp-validation-for="ClientUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicianUserName" class="control-label">Email del técnico</label>
+                <input asp-for="TechnicianUserName" class="form-control" />
+                <span asp-validation-for="TechnicianUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

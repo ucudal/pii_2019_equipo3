@@ -2,7 +2,7 @@ using System;
 
 namespace RazorPagesIgnis.Models
 {
-    public class Project : IProject
+    public class Project
     {
         public int ID { get; set; }
         public string Specialty { get; set; }

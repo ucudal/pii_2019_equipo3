@@ -65,8 +65,8 @@ namespace RazorPagesIgnis.Pages.Projects
                 NewProject.Technician = TechnicianSelected;
                 NewProject.Client = Project.Client;
 
-                _context.Project.Remove(Project);
                 _context.ProjectAssigned.Add(NewProject);
+                _context.Project.Remove(Project);
                 await _context.SaveChangesAsync();
             }
 

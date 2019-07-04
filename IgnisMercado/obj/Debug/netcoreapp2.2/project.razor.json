@@ -2988,11 +2988,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Pages\\ProjectsFinished\\Create.cshtml",
-      "TargetPath": "Pages\\ProjectsFinished\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Pages\\ProjectsAssigned\\Edit.cshtml",
       "TargetPath": "Pages\\ProjectsAssigned\\Edit.cshtml",
       "FileKind": "mvc"

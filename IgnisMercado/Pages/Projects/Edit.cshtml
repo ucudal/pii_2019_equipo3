@@ -35,6 +35,11 @@
                 <span asp-validation-for="Project.NHours" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ClientUserName" class="control-label">Correo del Cliente</label>
+                <input asp-for="ClientUserName" class="form-control" />
+                <span asp-validation-for="ClientUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

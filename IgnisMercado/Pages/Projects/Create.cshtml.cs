@@ -31,17 +31,17 @@ namespace RazorPagesIgnis.Pages.Projects
         public IList<Client> SelectedClient { get; set; }
         public string ClientId;
         public string ClientUserName;
-        public async Task<IActionResult> OnPostAsync(string ClientId)
+        public async Task<IActionResult> OnPostAsync(string ClientId, string ClientUserName)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            if (ClientId == null /* && ClientUserName == null*/)
+            if (ClientId == null && ClientUserName == null)
             {
                 return NotFound();
             }
-            /* else if(ClientUserName != null)
+            else if(ClientUserName != null)
             {
                 var clients = from t in _context.Client
                  select t;
@@ -49,7 +49,6 @@ namespace RazorPagesIgnis.Pages.Projects
                 SelectedClient = await clients.ToListAsync();
                 Client = SelectedClient[0];
             }
-            */
             else
             {
                 Client = await _context.Client.FindAsync(ClientId);

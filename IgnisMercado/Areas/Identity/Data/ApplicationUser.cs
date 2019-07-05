@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-using System.Text.RegularExpressions;
+
 /* 
 La clase ApplicationUser hereda de la clase IdentityUser(clase base) y a su vez 
 es la clase base dos clases que comparten atributos más generales 
@@ -16,15 +16,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
     public class ApplicationUser : IdentityUser
     {
         [PersonalData]
-        private string name;
-        public string Name { get{return name;}
-        set {
-            if (!Regex.IsMatch(value,@"^[A-Z]+[a-zA-Z""'\s-]*$"))
-            {
-                throw new InvalidOperationException("El nombre de usuario solo puede contener letras.");
-            }
-            name = value; 
-        } }
+        public string Name { get; set;}
 
 
         [Display(Name = "Date of Birth")]

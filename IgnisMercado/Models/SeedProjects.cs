@@ -2,6 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+/* 
+Esta clase es la que crea las instancias de Project (proyectos publicados)
+a que es la que tiene los datos necesario para ello por esto cumple 
+con el patrón Expert.
+Tambien cumple con Creator ya que es experto en crear instancias de
+la clase Project. 
+*/
 
 namespace RazorPagesIgnis.Models
 {

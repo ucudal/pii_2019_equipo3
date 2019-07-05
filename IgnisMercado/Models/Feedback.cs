@@ -1,6 +1,9 @@
 using System;
 
-
+/* 
+Esta clase cumple con SRP ya que la unica razon de cambio que 
+tiene por ejemplo si se agrega un nuevo atributo.
+*/
 namespace RazorPagesIgnis.Models
 {
     public class Feedback

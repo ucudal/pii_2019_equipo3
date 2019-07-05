@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RazorPagesIgnis.Migrations.Identity
+namespace RazorPagesIgnis.Migrations
 {
-    public partial class Identity : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,11 +42,28 @@ namespace RazorPagesIgnis.Migrations.Identity
                     AccessFailedCount = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     DOB = table.Column<DateTime>(nullable: false),
-                    Role = table.Column<string>(nullable: true)
+                    Role = table.Column<string>(nullable: true),
+                    Discriminator = table.Column<string>(nullable: false),
+                    Level = table.Column<string>(nullable: true),
+                    Specialty = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Feedback",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Comment = table.Column<string>(nullable: true),
+                    Positive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Feedback", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -155,6 +172,96 @@ namespace RazorPagesIgnis.Migrations.Identity
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Project",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Specialty = table.Column<string>(nullable: true),
+                    Level = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    NHours = table.Column<int>(nullable: false),
+                    ClientId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Project", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Project_AspNetUsers_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProjectAssigned",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Specialty = table.Column<string>(nullable: true),
+                    Level = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    NHours = table.Column<int>(nullable: false),
+                    ClientId = table.Column<string>(nullable: true),
+                    TechnicianId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProjectAssigned", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ProjectAssigned_AspNetUsers_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ProjectAssigned_AspNetUsers_TechnicianId",
+                        column: x => x.TechnicianId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProjectFinished",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Specialty = table.Column<string>(nullable: true),
+                    Level = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    NHours = table.Column<int>(nullable: false),
+                    ClientId = table.Column<string>(nullable: true),
+                    TechnicianId = table.Column<string>(nullable: true),
+                    FeedbackID = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProjectFinished", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ProjectFinished_AspNetUsers_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ProjectFinished_Feedback_FeedbackID",
+                        column: x => x.FeedbackID,
+                        principalTable: "Feedback",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ProjectFinished_AspNetUsers_TechnicianId",
+                        column: x => x.TechnicianId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -191,6 +298,36 @@ namespace RazorPagesIgnis.Migrations.Identity
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Project_ClientId",
+                table: "Project",
+                column: "ClientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectAssigned_ClientId",
+                table: "ProjectAssigned",
+                column: "ClientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectAssigned_TechnicianId",
+                table: "ProjectAssigned",
+                column: "TechnicianId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectFinished_ClientId",
+                table: "ProjectFinished",
+                column: "ClientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectFinished_FeedbackID",
+                table: "ProjectFinished",
+                column: "FeedbackID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectFinished_TechnicianId",
+                table: "ProjectFinished",
+                column: "TechnicianId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -211,10 +348,22 @@ namespace RazorPagesIgnis.Migrations.Identity
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Project");
+
+            migrationBuilder.DropTable(
+                name: "ProjectAssigned");
+
+            migrationBuilder.DropTable(
+                name: "ProjectFinished");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Feedback");
         }
     }
 }

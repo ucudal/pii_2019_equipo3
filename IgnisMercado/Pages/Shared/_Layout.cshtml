@@ -1,4 +1,7 @@
 @using RazorPagesIgnis.Areas.Identity.Data
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,29 +25,34 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Ignis Mercado</a> 
+                <a class="navbar-brand" asp-area="" asp-page="/Index" >Ignis Mercado</a> 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projects/index">Proyectos Publicados</a>
-                        </li>
+                        @if (User.IsInRole(IdentityData.NonAdminRoleNames[0]) || User.IsInRole(IdentityData.AdminRoleName))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Projects/index">Proyectos Publicados</a>
+                            </li>
+                        }
+                        @if (SignInManager.IsSignedIn(User))
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/ProjectsAssigned/index">Proyectos Asignados</a>
                         </li>
                         <li class="nav-item">
-                            @if (User.IsInRole(IdentityData.AdminRoleName))
-                            {
-                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Users/Index">Usuarios</a>
-                            }   
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ProjectsFinished/index">Proyectos Finalizados</a>
                         </li>
-                       
+                        }
+                        @if (User.IsInRole(IdentityData.AdminRoleName))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Users/Index">Usuarios</a>     
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>

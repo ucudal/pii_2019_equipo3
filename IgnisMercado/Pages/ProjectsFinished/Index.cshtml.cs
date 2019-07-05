@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesIgnis.Models;
 using RazorPagesIgnis.Areas.Identity.Data;
+using RazorPagesIgnis.Models;
 
-namespace RazorPagesIgnis.Pages.ProjectsAssigned
+namespace RazorPagesIgnis.Pages.ProjectsFinished
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,14 @@ namespace RazorPagesIgnis.Pages.ProjectsAssigned
             _context = context;
         }
 
-        public IList<ProjectAssigned> ProjectAssigned { get;set; }
+        public IList<ProjectFinished> ProjectFinished { get;set; }
 
         public async Task OnGetAsync()
         {
-            ProjectAssigned = await _context.ProjectAssigned
-                .Include(d => d.Technician)
-                .Include(e => e.Client).ToListAsync();
+            ProjectFinished = await _context.ProjectFinished
+            .Include(d => d.Technician)
+            .Include(e => e.Client)
+            .Include(f => f.Feedback).ToListAsync();
         }
     }
 }

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
-using RazorPagesIgnis.Areas.Identity.Data;
 
 namespace RazorPagesIgnis.Pages.Projects
 {
@@ -22,8 +21,10 @@ namespace RazorPagesIgnis.Pages.Projects
         public IList<Technician> Technician { get;set; }
 
         public Project Project { get; set; }
+        public IList<Project> Projects { get; set; }
 
-        public Technician TechnicianSelected { get; set; }
+        public string TechnicianID;
+        public Technician TechnicianSelected;
 
         public async Task OnGetAsync(int? id)
         {
@@ -38,28 +39,34 @@ namespace RazorPagesIgnis.Pages.Projects
             }
             Technician = await technicians.ToListAsync();
         }
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int? id, string technicianID)
         {
-            if (id == null)
+            if (id == null || technicianID == null) 
             {
                 return NotFound();
             }
 
-            Project = await _context.Project.FindAsync(id);
-            TechnicianSelected = await _context.Technician.FindAsync(id);
+            Projects = await _context.Project
+                .Include(d => d.Client).ToListAsync();
+            
+            Projects = Projects.Where(s => s.ID.Equals(id)).ToList();;
 
-            if (Project != null)
+            Project = Projects[0];
+
+            TechnicianSelected = await _context.Technician.FindAsync(technicianID);
+
+            if (Project != null && TechnicianSelected != null)
             {
                 ProjectAssigned NewProject = new ProjectAssigned();
-                NewProject.ID = Project.ID;
                 NewProject.Specialty = Project.Specialty;
                 NewProject.Level = Project.Level;
                 NewProject.Description = Project.Description;
                 NewProject.NHours = Project.NHours;
                 NewProject.Technician = TechnicianSelected;
+                NewProject.Client = Project.Client;
 
-                _context.Project.Remove(Project);
                 _context.ProjectAssigned.Add(NewProject);
+                _context.Project.Remove(Project);
                 await _context.SaveChangesAsync();
             }
 

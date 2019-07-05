@@ -13,36 +13,49 @@ namespace RazorPagesIgnis.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>>()))
             {
-                // Look for any movies.
+                
                 if (context.Project.Any())
                 {
-                    return;   // DB has been seeded
+                    return;   
                 }
+                ProjectsSeeder(serviceProvider);
+                
+            }
+        }
+        public static void ProjectsSeeder(IServiceProvider serviceProvider)
+            {
+                using (var context = new RazorPagesIgnis.Areas.Identity.Data.IdentityContext(
+                serviceProvider.GetRequiredService<
+                    DbContextOptions<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>>())){
 
-                context.Project.AddRange(
-                    new Project
-                    {
-                        Specialty = "Fotógrafo",
+                if (context.Project.Any()){
+                    return;   
+                };
+
+                var Projects = new Project[]{
+                    new Project { Specialty = "Fotógrafo",
                         Level = "Avanzado",
-                        Description = "-",
-                        NHours = 3,
-                    },
-                    new Project
-                    {
-                        Specialty = "Fotógrafo",
+                        Description = "Buscamos fotógrafo para sesión de publicidad.",
+                        NHours = 3,},
+                    new Project {Specialty = "Fotógrafo",
                         Level = "Intermedio",
-                        Description = "-",
-                        NHours = 1,
-                    },
-                    new Project
-                    {
-                        Specialty = "Camarógrafo",
+                        Description = "Se necesita fotógrafo para congreso a llevarse a cabo en la institución.",
+                        NHours = 1,},
+                    new Project {  Specialty = "Sonidista",
                         Level = "Intermedio",
-                        Description = "-",
+                        Description = "Se necesita camarógrafo para la grabación de videoclip promocional.",
                         NHours = 7,
-                    }
-                );
-                context.SaveChanges();
+                        },
+                    };
+                    foreach (Project p in Projects)
+                    {
+                        Client query = context.Client
+                        .Where(s => s.UserName == "fic@ignis.com")
+                        .FirstOrDefault<Client>();
+                        p.Client=query;
+                        context.Project.Add(p);
+                    };
+                    context.SaveChanges();
             }
         }
     }

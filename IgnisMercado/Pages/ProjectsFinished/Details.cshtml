@@ -1,0 +1,67 @@
+@page
+@model RazorPagesIgnis.Pages.ProjectsFinished.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProjectFinished</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Especialidad
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Specialty)
+        </dd>
+        <dt class="col-sm-2">
+            Nivel
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Level)
+        </dd>
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Nº de horas
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.NHours)
+        </dd>
+        <dt class="col-sm-2">
+            Cliente
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Client.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Técnico
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Technician.Name)
+        </dd>
+                <dt class="col-sm-2">
+            Desempeño positivo
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Feedback.Positive)
+        </dd>
+        <dt class="col-sm-2">
+            Comentario
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProjectFinished.Feedback.Comment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProjectFinished.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

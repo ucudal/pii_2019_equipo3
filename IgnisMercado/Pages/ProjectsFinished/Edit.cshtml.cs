@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesIgnis.Models;
 using RazorPagesIgnis.Areas.Identity.Data;
+using RazorPagesIgnis.Models;
 
-namespace RazorPagesIgnis.Pages.Projects
+namespace RazorPagesIgnis.Pages.ProjectsFinished
 {
     public class EditModel : PageModel
     {
@@ -21,11 +21,7 @@ namespace RazorPagesIgnis.Pages.Projects
         }
 
         [BindProperty]
-        public Project Project { get; set; }
-        public Client Client { get; set; }
-        public String ClientUserName;
-        public IList<Client> SelectedClient { get; set; }
-        public IList<Project> Projects { get; set; }
+        public ProjectFinished ProjectFinished { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -34,37 +30,23 @@ namespace RazorPagesIgnis.Pages.Projects
                 return NotFound();
             }
 
-             Projects = await _context.Project
-                .Include(d => d.Client).ToListAsync();
-            
-            Projects = Projects.Where(m => m.ID == id).ToList();;
+            ProjectFinished = await _context.ProjectFinished.FirstOrDefaultAsync(m => m.ID == id);
 
-            Project = Projects[0];
-
-            if (Project == null)
+            if (ProjectFinished == null)
             {
                 return NotFound();
             }
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string ClientUserName)
+        public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            if (ClientUserName != null)
-            {
-                var clients = from t in _context.Client
-                 select t;
-                clients = clients.Where(s => s.UserName.Equals(ClientUserName));
-                SelectedClient = await clients.ToListAsync();
-                Client = SelectedClient[0];
-                Project.Client = Client;
-            }
 
-            _context.Attach(Project).State = EntityState.Modified;
+            _context.Attach(ProjectFinished).State = EntityState.Modified;
 
             try
             {
@@ -72,7 +54,7 @@ namespace RazorPagesIgnis.Pages.Projects
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProjectExists(Project.ID))
+                if (!ProjectFinishedExists(ProjectFinished.ID))
                 {
                     return NotFound();
                 }
@@ -85,9 +67,9 @@ namespace RazorPagesIgnis.Pages.Projects
             return RedirectToPage("./Index");
         }
 
-        private bool ProjectExists(int id)
+        private bool ProjectFinishedExists(int id)
         {
-            return _context.Project.Any(e => e.ID == id);
+            return _context.ProjectFinished.Any(e => e.ID == id);
         }
     }
 }

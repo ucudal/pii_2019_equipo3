@@ -13,10 +13,10 @@ namespace RazorPagesIgnis.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>>()))
             {
-                // Look for any movies.
+                
                 if (context.Project.Any())
                 {
-                    return;   // DB has been seeded
+                    return;   
                 }
                 ProjectsSeeder(serviceProvider);
                 
@@ -29,7 +29,7 @@ namespace RazorPagesIgnis.Models
                     DbContextOptions<RazorPagesIgnis.Areas.Identity.Data.IdentityContext>>())){
 
                 if (context.Project.Any()){
-                    return;   // DB has been seeded
+                    return;   
                 };
 
                 var Projects = new Project[]{

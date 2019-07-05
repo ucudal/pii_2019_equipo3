@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
-using RazorPagesIgnis.Areas.Identity.Data;
+
 
 namespace RazorPagesIgnis.Pages.ProjectsFinished
 {

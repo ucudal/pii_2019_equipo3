@@ -1,23 +1,25 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RazorPagesIgnis.Models;
 
+/* 
+Esta clase es la que crea las instancias de administradores, clientes y tecnicos ya 
+que es la que tiene los datos necesario para ello por esto cumple, 
+con el patrón Expert y a su vez cumple con el patrón Creator. 
+
+Inicializa en la base de datos de identidad los usuarios y roles necesarios 
+para el funcionamiento de la aplicacion la primera vez que se ejecuta.
+
+Crea los usuarios y roles necesarios para el funcionamiento de la aplicacion si ya no existente.
+*/
+
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
-    /// <summary>
-    /// Inicializa en la base de datos de identidad los usuarios y roles necesarios para el funcionamiento de la aplicaci�n
-    /// la primera vez que se ejecuta.
-    /// </summary>
     public static class SeedIdentityData
     {
-        /// <summary>
-        /// Crea los usuarios y roles necesarios para el funcionamiento de la aplicaci�n si ya no existente.
-        /// </summary>
         /// <param name="serviceProvider">El <see cref="IServiceProvider"/> al que se han injectado previamente un
         /// <see cref="UserManager<T>"/> y un <see cref="RoleManager<T>"/>.</param>
         public static void Initialize(IServiceProvider serviceProvider)
@@ -32,11 +34,20 @@ namespace RazorPagesIgnis.Areas.Identity.Data
 
         private static void SeedUsers(UserManager<ApplicationUser> userManager)
         {
-            // Crea el primer y �nico administrador si no existe. Primero crea un usuario y luego se asigna el rol de adminstrador.
+            // Crea el primer administrador si no existe. Primero crea un usuario y luego se asigna el rol de adminstrador.
             if (userManager.FindByNameAsync(IdentityData.AdminUserName).Result == null)
             {
                 ApplicationUser user = new ApplicationUser();
-                user.Name = IdentityData.AdminName;
+                ApplicationUser admin = new ApplicationUser();
+                try
+                {
+                    admin.Name = IdentityData.AdminName;
+                }
+                catch (InvalidOperationException e)
+                {
+                    
+                    throw e;
+                }  
                 user.UserName = IdentityData.AdminUserName;
                 user.Email = IdentityData.AdminMail;
                 user.DOB = IdentityData.AdminDOB;
@@ -92,7 +103,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
 
                 if (context.Client.Any()){
                     Console.WriteLine("RETURN");
-                    return;   // DB has been seeded
+                    return;  
                 };
             }
 
@@ -111,7 +122,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             using (var context = new IdentityContext(serviceProvider.GetRequiredService<DbContextOptions<IdentityContext>>())){
 
                 if (context.Technician.Any()){
-                    return;   // DB has been seeded
+                    return;  
                 };
             }
 

@@ -1,12 +1,11 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Linq;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Collections.Generic;
+
 using RazorPagesIgnis.Areas.Identity.Data;
 
+/* 
+Technicians hereda de  ApplicationUser y esta a su vez hereda de la clase IdentityUser,
+tiene los atributos de dicha clase y a su vez tiene atributos 
+más específicos de los técnicos.  
+*/
 
 namespace RazorPagesIgnis.Models
 {

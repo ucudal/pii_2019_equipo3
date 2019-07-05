@@ -1,5 +1,4 @@
 using System;
-using RazorPagesIgnis.Models;
 
 namespace RazorPagesIgnis.Areas.Identity.Data
 {

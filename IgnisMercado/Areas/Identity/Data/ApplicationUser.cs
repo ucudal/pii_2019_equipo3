@@ -1,7 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-
 /* 
 La clase ApplicationUser hereda de la clase IdentityUser(clase base) y a su vez 
 es la clase base dos clases que comparten atributos más generales 

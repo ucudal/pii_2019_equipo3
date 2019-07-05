@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 C:\Users\jalca\Desktop\prueba\prueba2019\RazorPagesIgnis\bin\Debug\netcoreapp2.2\RazorPagesIgnis.deps.json
 C:\Users\jalca\Desktop\prueba\prueba2019\RazorPagesIgnis\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.json
 C:\Users\jalca\Desktop\prueba\prueba2019\RazorPagesIgnis\bin\Debug\netcoreapp2.2\RazorPagesIgnis.runtimeconfig.dev.json
@@ -385,7 +383,6 @@ C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcore
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.pdb
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.dll
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\bin\Debug\netcoreapp2.2\RazorPagesIgnis.Views.pdb
->>>>>>> Stashed changes
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csprojAssemblyReference.cache
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.csproj.CoreCompileInputs.cache
 C:\Users\Federico\Desktop\branch\pii_2019_equipo3\IgnisMercado\obj\Debug\netcoreapp2.2\RazorPagesIgnis.RazorAssemblyInfo.cache

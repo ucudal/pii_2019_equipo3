@@ -7,12 +7,11 @@ using RazorPagesIgnis.Models;
 
 /* 
 Esta clase es la que crea las instancias de administradores, clientes y tecnicos ya 
-que es la que tiene los datos necesario para ello por esto cumple, 
-con el patrón Expert y a su vez cumple con el patrón Creator. 
-
+que es la que tiene los datos necesario para ello por esto cumple con el patron Expert. 
+Tambien cumple con Creator ya que es experta en crear instansias de los 3 usuarios
+ya nombrados.
 Inicializa en la base de datos de identidad los usuarios y roles necesarios 
 para el funcionamiento de la aplicacion la primera vez que se ejecuta.
-
 Crea los usuarios y roles necesarios para el funcionamiento de la aplicacion si ya no existente.
 */
 
@@ -39,15 +38,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             {
                 ApplicationUser user = new ApplicationUser();
                 ApplicationUser admin = new ApplicationUser();
-                try
-                {
-                    admin.Name = IdentityData.AdminName;
-                }
-                catch (InvalidOperationException e)
-                {
-                    
-                    throw e;
-                }  
+                admin.Name = IdentityData.AdminName;
                 user.UserName = IdentityData.AdminUserName;
                 user.Email = IdentityData.AdminMail;
                 user.DOB = IdentityData.AdminDOB;

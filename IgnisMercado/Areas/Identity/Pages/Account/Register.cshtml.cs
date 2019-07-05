@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -10,6 +9,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using RazorPagesIgnis.Areas.Identity.Data;
+
+/* 
+Esta clase es la encargada de realizar el registro de los nuevos usuarios
+Esta clase es la que crea las instancias de ApplicationUser ya 
+que es la que obtiene los datos necesario para ello por esto cumple con el patron Expert.
+Tambien cumple con Creator ya que es experta en crear instancias de ApplicationUser. 
+*/
 
 namespace RazorPagesIgnis.Areas.Identity.Pages.Account
 {

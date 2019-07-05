@@ -1,5 +1,8 @@
 using System;
-
+/* 
+    En esta clase tiene usuarios con los 3 roles posibles ya creados para
+    que se pueda ver las funcionalidades de la appweb.
+*/
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
     public static class IdentityData
@@ -26,7 +29,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
         "FIC (UCU)",
         };
         public static string[] ClientMail = new string [] {
-        "asuntosestudiantiles@oignis.com",
+        "asuntosestudiantiles@ignis.com",
         "biblioteca@ignis.com",
         "fic@ignis.com",
         };

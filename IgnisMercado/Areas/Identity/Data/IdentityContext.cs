@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace RazorPagesIgnis.Areas.Identity.Data
 {
     public class IdentityContext : IdentityDbContext<ApplicationUser> 

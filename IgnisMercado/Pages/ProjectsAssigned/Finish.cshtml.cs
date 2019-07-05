@@ -7,7 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
 
-
+/* 
+Esta clase se encarga de asignar un feedback,dado por un cliente, a un proyecto del tipo 
+asignado (ProjectAssigned) y a su vez pasa dicho proyecto a uno del tipo 
+finalizado (ProjectFinished); la clase es experta en realizar esta operacion(Expert).
+*/
 namespace RazorPagesIgnis.Pages.ProjectsFinished
 {
     public class FinishModel : PageModel

@@ -6,7 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Models;
-
+/* 
+Esta clase se encarga de asignar un tecnico a un proyecto del tipo publicado (Project)
+y a su vez pasa dicho proyecto a uno del tipo asignado(ProjectAssigned); 
+la clase es experta en realizar esta operacion(Expert).
+*/
 namespace RazorPagesIgnis.Pages.Projects
 {
     public class AssignModel : PageModel

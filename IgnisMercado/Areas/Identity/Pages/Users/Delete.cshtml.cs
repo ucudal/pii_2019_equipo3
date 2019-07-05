@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesIgnis.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authorization;
 
-
+/* 
+Esta clase es solo para los administradores y sirve para poder eliminar a un usuario.
+*/
 namespace RazorPagesIgnis.Areas.Identity.Pages.Users
 {
     [Authorize(Roles=IdentityData.AdminRoleName)] 

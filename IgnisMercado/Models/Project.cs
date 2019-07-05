@@ -1,7 +1,6 @@
-
 /* 
-Project hereda de la interface IProject ya que es un tipo de 
-projecto (publicados) tiene los atributos de dicha interface. 
+Esta clase cumple con SRP ya que la unica razon de cambio que 
+tiene por ejemplo si se agrega un nuevo atributo.
 */
 namespace RazorPagesIgnis.Models
 {

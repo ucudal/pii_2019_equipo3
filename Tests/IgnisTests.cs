@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 
+
 namespace Tests
 {
     public class IgnisTests
@@ -41,16 +42,7 @@ namespace Tests
             Assert.Equal(DateTime.Parse("2000-10-05"),dob2.DOB);
         }
 
-        [Fact]
-        public void PersonMailTest()
-        {
-            Technician mail1 = new Technician();
-            Client mail2 = new Client();
-            mail1.Email = "example1@example.com";
-            mail2.Email = "example2@example.com";
-            Assert.Equal("example1@example.com",mail1.EMail);
-            Assert.Equal("example2@example.com",mail2.EMail);
-        }
+        
 
         [Fact]
         public void TechnicianSpecialtyTest()
@@ -67,24 +59,7 @@ namespace Tests
             level1.Level = "Avanzado";
             Assert.Equal("Avanzado",level1.Level);
         }
-        /*
-        [Fact]
-        public void ClientListTest()
-        {
-            Project proy = new Project();
-            Project proy2 = new Project();
-            Client list = new Client();
-            Assert.Equal(0,list.Projects.Count);
-            list.Projects.Add(proy);
-            Assert.Equal(1,list.Projects.Count);
-            list.Projects.Remove(proy);
-            Assert.Equal(0,list.Projects.Count);
-            list.Projects.Add(proy);
-            list.Projects.Add(proy2);
-            list.Projects.Clear();
-            Assert.Equal(0,list.Projects.Count);
-        }
-        */
+       
 
          [Fact]
         public void ProjectSpecialtyTest()
@@ -111,114 +86,84 @@ namespace Tests
         }
 
 
-    public static class Utilities
-    {
-        public static DbContextOptions<IdentityContext> TestDbContextOptions()
+        [Fact]
+        public void CreateProjectTest()
         {
-            // Create a new service provider to create a new in-memory database.
-            var serviceProvider = new ServiceCollection()
-                .AddEntityFrameworkInMemoryDatabase()
-                .BuildServiceProvider();
+            Project proj = new Project();
+            var id = 10;
+            var desc = "Video Musical";
+            var lev = "Basico";
+            var spec = "Fotografo";
+            var nh = 7;
 
-            // Create a new options instance using an in-memory database and
-            // IServiceProvider that the context should resolve all of its
-            // services from.
-            var builder = new DbContextOptionsBuilder<IdentityContext>()
-                .UseInMemoryDatabase("InMemoryDb")
-                .UseInternalServiceProvider(serviceProvider);
+            proj.ID = id;
+            proj.Description = desc;
+            proj.Level = lev;
+            proj.Specialty = spec;
+            proj.NHours = nh;
 
-            return builder.Options;
+            Assert.Equal(id , proj.ID);
+            Assert.Equal(desc , proj.Description);
+            Assert.Equal(lev , proj.Level);
+            Assert.Equal(spec , proj.Specialty);
+            Assert.Equal(nh , proj.NHours);
+
         }
-    }
- 
+
+
 
         [Fact]
-        public async Task ProjectAssignTest()
+        public void AddClientToProjectTest()
         {
-            using (var db = new IdentityContext(Utilities.TestDbContextOptions()))
-            {
-                // Arrange
-                var projId = 10;
-                var expectedProject = new ProjectAssigned() { ID = projId};
+            Client cliente = new Client();
+            Project proj = new Project();
 
-                // Act
-                var proj1 = new Project();
-                await db.OnPostAsync(projId);
+            cliente.Name = "Juan";
+            cliente.DOB = DateTime.Parse("1998-10-05");
 
-                // Assert
-                var actualProject = await db.FindAsync<Action>(projId);
-                Assert.Equal(expectedProject, actualProject);
-            }
+            proj.Client = cliente;
+
+            Assert.Equal("Juan", proj.Client.Name);
+            Assert.Equal(DateTime.Parse("1998-10-05"), proj.Client.DOB);
         }
-
-        private delegate Task TestAction(IdentityContext context);
-        private async Task PrepareTestContext(TestAction testAction)
-        {
-            // Database is in memory as long the connection is open
-            var connection = new SqliteConnection("DataSource=:memory:");
-            try
-            {
-                connection.Open();
-
-                var options = new DbContextOptionsBuilder<IdentityContext>()
-                    .UseSqlite(connection)
-                    .Options;
-
-                // Create the schema in the database and seeds with test data
-                using (var context = new IdentityContext(options))
-                {
-                    context.Database.EnsureCreated();
-                    SeedData.Initialize(context);
-
-                    await testAction(context);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
+    
         [Fact]
-        public async Task ProjectFinisherTest()
+        public void FeedbackTest()
         {
-            using (var db = new AppDbContext(Utilities.TestDbContextOptions()))
-            {
-                // Arrange
-                var proj1 = new ProjectAssigned();
-                
-                
+            Feedback feed = new Feedback();
+            ProjectFinished proj2 = new ProjectFinished();
 
-                // Act
-                var feedback1 = new Feedback();
-                await db.OnPostAsync(feedback1);
+            int id = 3;
+            bool pos = true; 
+            string com = "Buen Trabajo";
 
-                // Assert
-                var projFinished = await db.FindAsync<Action>(proj1);
-                Assert.Equal(proj1, projFinished);
-                Assert.Contains(projFinished, feedback1);
-            }
-        }
+            feed.ID = id;
+            feed.Comment = com;
+            feed.Positive = pos;
 
-        [Fact]
-        public async Task ProjectFinishedDeleteTest()
-        {
-            using (var db = new AppDbContext(Utilities.TestDbContextOptions()))
+            proj2.Feedback = feed;
             
-            {
-                // Arrange
-                var proj1 = new ProjectFinished();
-                
 
-                // Act
-                await db.OnPostAsync(proj1);
+            Assert.Equal(feed, proj2.Feedback);
 
-                // Assert
-                var proj1 = await db.FindAsync<Action>(proj1);
-                Assert.Empty(proj1);
-            }
         }
 
+        [Fact]
+        public void AssingTechnicianTest()
+        {
+            Technician tec = new Technician();
+            ProjectAssigned proj1 = new ProjectAssigned();
+
+            tec.Name = "Jose Martinez";
+
+            proj1.Technician = tec;
+
+            Assert.Equal("Jose Martinez", proj1.Technician.Name);
+
+        }
+
+
+   
 
     }
 }

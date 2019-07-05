@@ -38,15 +38,7 @@ namespace RazorPagesIgnis.Areas.Identity.Data
             {
                 ApplicationUser user = new ApplicationUser();
                 ApplicationUser admin = new ApplicationUser();
-                try
-                {
-                    admin.Name = IdentityData.AdminName;
-                }
-                catch (InvalidOperationException e)
-                {
-                    
-                    throw e;
-                }  
+                admin.Name = IdentityData.AdminName;
                 user.UserName = IdentityData.AdminUserName;
                 user.Email = IdentityData.AdminMail;
                 user.DOB = IdentityData.AdminDOB;
